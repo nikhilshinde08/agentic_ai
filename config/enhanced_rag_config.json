@@ -1,0 +1,13 @@
+{
+  "chunking_strategy": "structured_table_chunks",
+  "vector_db_path": "vector_db_structured",
+  "embedding_model": "text-embedding-3-large",
+  "chunk_overlap": 0,
+  "business_context_enabled": true,
+  "healthcare_domain_enabled": true,
+  "column_categorization_enabled": true,
+  "sample_queries_enabled": true,
+  "usage_hints_enabled": true,
+  "relationship_mapping_enabled": true,
+  "accuracy_target": 0.98
+}

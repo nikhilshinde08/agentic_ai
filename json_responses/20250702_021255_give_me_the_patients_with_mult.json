@@ -1,0 +1,22 @@
+{
+  "query_metadata": {
+    "original_query": "give me the patients with multiple allergies",
+    "timestamp": "2025-07-02T02:12:55.055153",
+    "session_id": "rag_session_20250702_020806",
+    "filename": "20250702_021255_give_me_the_patients_with_mult.json"
+  },
+  "response": {
+    "success": false,
+    "message": "Error: Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "query_understanding": "give me the patients with multiple allergies",
+    "sql_query": null,
+    "result_count": 0,
+    "results": [],
+    "metadata": {
+      "error_type": "GraphRecursionError",
+      "processing_time": 75.259758,
+      "session_id": "rag_session_20250702_020806",
+      "query_number": 2
+    }
+  }
+}

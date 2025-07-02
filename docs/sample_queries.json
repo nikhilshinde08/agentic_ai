@@ -1,0 +1,32 @@
+{
+  "basic_exploration": [
+    "How many patients are in the database?",
+    "What tables are available in this database?",
+    "Show me the structure of the patients table",
+    "What columns link patients to their medical records?"
+  ],
+  "patient_analysis": [
+    "Find patients with diabetes",
+    "Show patients with multiple chronic conditions",
+    "Find the oldest and youngest patients",
+    "Show patients by gender distribution"
+  ],
+  "clinical_analysis": [
+    "What are the most common medical conditions?",
+    "Show recent medical encounters",
+    "Find patients with specific medications",
+    "What procedures are performed most frequently?"
+  ],
+  "financial_analysis": [
+    "Show the most expensive procedures",
+    "Find high-cost patients",
+    "Analyze insurance coverage patterns",
+    "Show revenue by provider"
+  ],
+  "relationship_analysis": [
+    "How are patients connected to providers?",
+    "Show the relationship between encounters and conditions",
+    "Map patient journey through multiple encounters",
+    "Find provider specialties and patient loads"
+  ]
+}

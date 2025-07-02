@@ -1,0 +1,178 @@
+{
+  "query_metadata": {
+    "original_query": "give me the patient id from encounter table",
+    "timestamp": "2025-07-02T15:37:13.337981",
+    "session_id": "comprehensive_sql_20250702_153650",
+    "filename": "20250702_153713_give_me_the_patient_id_from_en_ALL_SQL.json",
+    "agent_type": "enhanced_structured_rag",
+    "sql_capture_method": "comprehensive_all_sources"
+  },
+  "sql_comprehensive": {
+    "total_sql_queries_found": 10,
+    "unique_sql_queries": 3,
+    "sql_summary": {
+      "total_queries": 10,
+      "unique_queries": 3,
+      "query_types": {
+        "SELECT": 10
+      },
+      "sources": {
+        "agent_message_2:raw_select_no_semicolon:message_index_2": 2,
+        "agent_message_4:sql_prefix:message_index_4": 2,
+        "agent_message_4:raw_select_with_semicolon:message_index_4": 2,
+        "agent_message_8:sql_prefix:message_index_8": 2,
+        "agent_message_8:raw_select_with_semicolon:message_index_8": 2
+      },
+      "average_length": 33.2
+    },
+    "extraction_log": [
+      "[agent_message_2:raw_select_no_semicolon:message_index_2] SELECT statement using these tables....",
+      "[agent_message_4:sql_prefix:message_index_4] SELECT PATIENT_ID FROM ENCOUNTERS;...",
+      "[agent_message_4:raw_select_with_semicolon:message_index_4] SELECT PATIENT_ID FROM ENCOUNTERS;...",
+      "[agent_message_8:sql_prefix:message_index_8] SELECT PATIENT FROM ENCOUNTERS;...",
+      "[agent_message_8:raw_select_with_semicolon:message_index_8] SELECT PATIENT FROM ENCOUNTERS;...",
+      "[agent_message_2:raw_select_no_semicolon:message_index_2] SELECT statement using these tables....",
+      "[agent_message_4:sql_prefix:message_index_4] SELECT PATIENT_ID FROM ENCOUNTERS;...",
+      "[agent_message_4:raw_select_with_semicolon:message_index_4] SELECT PATIENT_ID FROM ENCOUNTERS;...",
+      "[agent_message_8:sql_prefix:message_index_8] SELECT PATIENT FROM ENCOUNTERS;...",
+      "[agent_message_8:raw_select_with_semicolon:message_index_8] SELECT PATIENT FROM ENCOUNTERS;..."
+    ],
+    "all_sql_queries": [
+      {
+        "sql": "SELECT statement using these tables.",
+        "source": "agent_message_2:raw_select_no_semicolon:message_index_2",
+        "context": "message_index_2",
+        "timestamp": "2025-07-02T15:37:13.337510",
+        "length": 36,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT PATIENT_ID FROM ENCOUNTERS;",
+        "source": "agent_message_4:sql_prefix:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T15:37:13.337559",
+        "length": 34,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT PATIENT_ID FROM ENCOUNTERS;",
+        "source": "agent_message_4:raw_select_with_semicolon:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T15:37:13.337582",
+        "length": 34,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT PATIENT FROM ENCOUNTERS;",
+        "source": "agent_message_8:sql_prefix:message_index_8",
+        "context": "message_index_8",
+        "timestamp": "2025-07-02T15:37:13.337718",
+        "length": 31,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT PATIENT FROM ENCOUNTERS;",
+        "source": "agent_message_8:raw_select_with_semicolon:message_index_8",
+        "context": "message_index_8",
+        "timestamp": "2025-07-02T15:37:13.337741",
+        "length": 31,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT statement using these tables.",
+        "source": "agent_message_2:raw_select_no_semicolon:message_index_2",
+        "context": "message_index_2",
+        "timestamp": "2025-07-02T15:37:13.338088",
+        "length": 36,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT PATIENT_ID FROM ENCOUNTERS;",
+        "source": "agent_message_4:sql_prefix:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T15:37:13.338119",
+        "length": 34,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT PATIENT_ID FROM ENCOUNTERS;",
+        "source": "agent_message_4:raw_select_with_semicolon:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T15:37:13.338142",
+        "length": 34,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT PATIENT FROM ENCOUNTERS;",
+        "source": "agent_message_8:sql_prefix:message_index_8",
+        "context": "message_index_8",
+        "timestamp": "2025-07-02T15:37:13.338273",
+        "length": 31,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT PATIENT FROM ENCOUNTERS;",
+        "source": "agent_message_8:raw_select_with_semicolon:message_index_8",
+        "context": "message_index_8",
+        "timestamp": "2025-07-02T15:37:13.338294",
+        "length": 31,
+        "query_type": "SELECT"
+      }
+    ],
+    "unique_sql_queries_list": [
+      {
+        "sql": "SELECT statement using these tables.",
+        "source": "agent_message_2:raw_select_no_semicolon:message_index_2",
+        "context": "message_index_2",
+        "timestamp": "2025-07-02T15:37:13.337510",
+        "length": 36,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT PATIENT_ID FROM ENCOUNTERS;",
+        "source": "agent_message_4:sql_prefix:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T15:37:13.337559",
+        "length": 34,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT PATIENT FROM ENCOUNTERS;",
+        "source": "agent_message_8:sql_prefix:message_index_8",
+        "context": "message_index_8",
+        "timestamp": "2025-07-02T15:37:13.337718",
+        "length": 31,
+        "query_type": "SELECT"
+      }
+    ]
+  },
+  "response": {
+    "success": false,
+    "message": "It seems the column \"PATIENT_ID\" does not exist in the ENCOUNTERS table. Let me know if you'd like me to refine the query or assist further!",
+    "query_understanding": "Enhanced analysis of: give me the patient id from encounter table",
+    "sql_query": null,
+    "result_count": 0,
+    "results": [],
+    "business_insights": [],
+    "metadata": {
+      "agent_type": "enhanced_structured_rag",
+      "vector_db_used": true,
+      "structured_chunks": true,
+      "success_score": 0,
+      "error_score": 1,
+      "has_business_context": false,
+      "uppercase_columns_enforced": true
+    }
+  },
+  "original_agent_result": {
+    "message_count": 10,
+    "has_tool_calls": true
+  },
+  "system_info": {
+    "vector_db_type": "structured_faiss",
+    "embedding_model": "text-embedding-3-large",
+    "chat_model": "gpt-4o",
+    "comprehensive_sql_capture": true,
+    "sql_extraction_patterns": 20
+  }
+}

@@ -1,0 +1,197 @@
+{
+  "query_metadata": {
+    "original_query": "give me all the patients who has diabetes",
+    "timestamp": "2025-07-02T14:19:48.509528",
+    "session_id": "comprehensive_sql_20250702_141914",
+    "filename": "20250702_141948_give_me_all_the_patients_who_h_ALL_SQL.json",
+    "agent_type": "enhanced_structured_rag",
+    "sql_capture_method": "comprehensive_all_sources"
+  },
+  "sql_comprehensive": {
+    "total_sql_queries_found": 12,
+    "unique_sql_queries": 3,
+    "sql_summary": {
+      "total_queries": 12,
+      "unique_queries": 3,
+      "query_types": {
+        "SELECT": 12
+      },
+      "sources": {
+        "agent_message_2:raw_select_no_semicolon:message_index_2": 2,
+        "agent_message_4:sql_prefix:message_index_4": 2,
+        "agent_message_4:raw_select_with_semicolon:message_index_4": 2,
+        "agent_message_6:raw_select_no_semicolon:message_index_6": 2,
+        "agent_message_8:sql_prefix:message_index_8": 2,
+        "agent_message_8:raw_select_with_semicolon:message_index_8": 2
+      },
+      "average_length": 116.66666666666667
+    },
+    "extraction_log": [
+      "[agent_message_2:raw_select_no_semicolon:message_index_2] SELECT statement using these tables....",
+      "[agent_message_4:sql_prefix:message_index_4] SELECT P.ID, P.FIRST, P.LAST FROM PATIENTS P JOIN ...",
+      "[agent_message_4:raw_select_with_semicolon:message_index_4] SELECT P.ID, P.FIRST, P.LAST FROM PATIENTS P JOIN ...",
+      "[agent_message_6:raw_select_no_semicolon:message_index_6] SELECT statement using these tables....",
+      "[agent_message_8:sql_prefix:message_index_8] SELECT PATIENTS.PATIENT_ID, PATIENTS.FIRST_NAME, P...",
+      "[agent_message_8:raw_select_with_semicolon:message_index_8] SELECT PATIENTS.PATIENT_ID, PATIENTS.FIRST_NAME, P...",
+      "[agent_message_2:raw_select_no_semicolon:message_index_2] SELECT statement using these tables....",
+      "[agent_message_4:sql_prefix:message_index_4] SELECT P.ID, P.FIRST, P.LAST FROM PATIENTS P JOIN ...",
+      "[agent_message_4:raw_select_with_semicolon:message_index_4] SELECT P.ID, P.FIRST, P.LAST FROM PATIENTS P JOIN ...",
+      "[agent_message_6:raw_select_no_semicolon:message_index_6] SELECT statement using these tables....",
+      "[agent_message_8:sql_prefix:message_index_8] SELECT PATIENTS.PATIENT_ID, PATIENTS.FIRST_NAME, P...",
+      "[agent_message_8:raw_select_with_semicolon:message_index_8] SELECT PATIENTS.PATIENT_ID, PATIENTS.FIRST_NAME, P..."
+    ],
+    "all_sql_queries": [
+      {
+        "sql": "SELECT statement using these tables.",
+        "source": "agent_message_2:raw_select_no_semicolon:message_index_2",
+        "context": "message_index_2",
+        "timestamp": "2025-07-02T14:19:48.508672",
+        "length": 36,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT P.ID, P.FIRST, P.LAST FROM PATIENTS P JOIN ENCOUNTERS E ON P.ID = E.PATIENT_ID WHERE E.DIAGNOSIS = 'Diabetes';",
+        "source": "agent_message_4:sql_prefix:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T14:19:48.508760",
+        "length": 117,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT P.ID, P.FIRST, P.LAST FROM PATIENTS P JOIN ENCOUNTERS E ON P.ID = E.PATIENT_ID WHERE E.DIAGNOSIS = 'Diabetes';",
+        "source": "agent_message_4:raw_select_with_semicolon:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T14:19:48.508805",
+        "length": 117,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT statement using these tables.",
+        "source": "agent_message_6:raw_select_no_semicolon:message_index_6",
+        "context": "message_index_6",
+        "timestamp": "2025-07-02T14:19:48.509007",
+        "length": 36,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT PATIENTS.PATIENT_ID, PATIENTS.FIRST_NAME, PATIENTS.LAST_NAME FROM PATIENTS JOIN CONDITIONS ON PATIENTS.PATIENT_ID = CONDITIONS.PATIENT_ID WHERE CONDITIONS.CONDITION_DESCRIPTION = 'Diabetes';",
+        "source": "agent_message_8:sql_prefix:message_index_8",
+        "context": "message_index_8",
+        "timestamp": "2025-07-02T14:19:48.509064",
+        "length": 197,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT PATIENTS.PATIENT_ID, PATIENTS.FIRST_NAME, PATIENTS.LAST_NAME FROM PATIENTS JOIN CONDITIONS ON PATIENTS.PATIENT_ID = CONDITIONS.PATIENT_ID WHERE CONDITIONS.CONDITION_DESCRIPTION = 'Diabetes';",
+        "source": "agent_message_8:raw_select_with_semicolon:message_index_8",
+        "context": "message_index_8",
+        "timestamp": "2025-07-02T14:19:48.509111",
+        "length": 197,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT statement using these tables.",
+        "source": "agent_message_2:raw_select_no_semicolon:message_index_2",
+        "context": "message_index_2",
+        "timestamp": "2025-07-02T14:19:48.509679",
+        "length": 36,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT P.ID, P.FIRST, P.LAST FROM PATIENTS P JOIN ENCOUNTERS E ON P.ID = E.PATIENT_ID WHERE E.DIAGNOSIS = 'Diabetes';",
+        "source": "agent_message_4:sql_prefix:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T14:19:48.509733",
+        "length": 117,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT P.ID, P.FIRST, P.LAST FROM PATIENTS P JOIN ENCOUNTERS E ON P.ID = E.PATIENT_ID WHERE E.DIAGNOSIS = 'Diabetes';",
+        "source": "agent_message_4:raw_select_with_semicolon:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T14:19:48.509772",
+        "length": 117,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT statement using these tables.",
+        "source": "agent_message_6:raw_select_no_semicolon:message_index_6",
+        "context": "message_index_6",
+        "timestamp": "2025-07-02T14:19:48.509968",
+        "length": 36,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT PATIENTS.PATIENT_ID, PATIENTS.FIRST_NAME, PATIENTS.LAST_NAME FROM PATIENTS JOIN CONDITIONS ON PATIENTS.PATIENT_ID = CONDITIONS.PATIENT_ID WHERE CONDITIONS.CONDITION_DESCRIPTION = 'Diabetes';",
+        "source": "agent_message_8:sql_prefix:message_index_8",
+        "context": "message_index_8",
+        "timestamp": "2025-07-02T14:19:48.510023",
+        "length": 197,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT PATIENTS.PATIENT_ID, PATIENTS.FIRST_NAME, PATIENTS.LAST_NAME FROM PATIENTS JOIN CONDITIONS ON PATIENTS.PATIENT_ID = CONDITIONS.PATIENT_ID WHERE CONDITIONS.CONDITION_DESCRIPTION = 'Diabetes';",
+        "source": "agent_message_8:raw_select_with_semicolon:message_index_8",
+        "context": "message_index_8",
+        "timestamp": "2025-07-02T14:19:48.510067",
+        "length": 197,
+        "query_type": "SELECT"
+      }
+    ],
+    "unique_sql_queries_list": [
+      {
+        "sql": "SELECT statement using these tables.",
+        "source": "agent_message_2:raw_select_no_semicolon:message_index_2",
+        "context": "message_index_2",
+        "timestamp": "2025-07-02T14:19:48.508672",
+        "length": 36,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT P.ID, P.FIRST, P.LAST FROM PATIENTS P JOIN ENCOUNTERS E ON P.ID = E.PATIENT_ID WHERE E.DIAGNOSIS = 'Diabetes';",
+        "source": "agent_message_4:sql_prefix:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T14:19:48.508760",
+        "length": 117,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT PATIENTS.PATIENT_ID, PATIENTS.FIRST_NAME, PATIENTS.LAST_NAME FROM PATIENTS JOIN CONDITIONS ON PATIENTS.PATIENT_ID = CONDITIONS.PATIENT_ID WHERE CONDITIONS.CONDITION_DESCRIPTION = 'Diabetes';",
+        "source": "agent_message_8:sql_prefix:message_index_8",
+        "context": "message_index_8",
+        "timestamp": "2025-07-02T14:19:48.509064",
+        "length": 197,
+        "query_type": "SELECT"
+      }
+    ]
+  },
+  "response": {
+    "success": false,
+    "message": "It seems there is still an issue with the column names. I will need to verify the exact column names in the PATIENTS and CONDITIONS tables to proceed correctly. Let me know if you'd like me to investigate further.",
+    "query_understanding": "Enhanced analysis of: give me all the patients who has diabetes",
+    "sql_query": null,
+    "result_count": 0,
+    "results": [],
+    "business_insights": [],
+    "metadata": {
+      "agent_type": "enhanced_structured_rag",
+      "vector_db_used": true,
+      "structured_chunks": true,
+      "success_score": 0,
+      "error_score": 0,
+      "has_business_context": false,
+      "uppercase_columns_enforced": true
+    }
+  },
+  "original_agent_result": {
+    "message_count": 10,
+    "has_tool_calls": true
+  },
+  "system_info": {
+    "vector_db_type": "structured_faiss",
+    "embedding_model": "text-embedding-3-large",
+    "chat_model": "gpt-4o",
+    "comprehensive_sql_capture": true,
+    "sql_extraction_patterns": 20
+  }
+}

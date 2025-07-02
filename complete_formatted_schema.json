@@ -1,0 +1,152 @@
+[
+  {
+    "id": "allergies_full",
+    "metadata": {
+      "table_name": "allergies",
+      "section": "full",
+      "columns_count": 6,
+      "relations_count": 2
+    },
+    "text": "Table: Allergies  \nThis table holds a list of allergies against the patients.\nColumns:\n– START (date allergy began)  \n– STOP (date allergy ended)  \n– PATIENT (FK → patients.ID)  \n– ENCOUNTER (FK → encounters.ID)  \n– CODE (allergy code)  \n– DESCRIPTION (allergy description)  \nIdentification fields:\nENCOUNTER, PATIENT, CODE\nDate fields:\nSTART, STOP\nRelation fields:\npatients.ID ↔ allergies.PATIENT  \nencounters.ID ↔ allergies.ENCOUNTER  \n"
+  },
+  {
+    "id": "careplans_full",
+    "metadata": {
+      "table_name": "careplans",
+      "section": "full",
+      "columns_count": 9,
+      "relations_count": 2
+    },
+    "text": "Table: Careplans  \nThis table holds a list of records for patient's diagnosis handled by nursing care.\nColumns:\n– ID (unique careplan identifier)  \n– START (start date of careplan)  \n– STOP (stop date of careplan)  \n– PATIENT (FK → patients.ID)  \n– ENCOUNTER (FK → encounters.ID)  \n– CODE (SNOMED code)  \n– DESCRIPTION (description of code)  \n– REASONCODE (SNOMED code for reason)  \n– REASONDESCRIPTION (description of reason code)  \nIdentification fields:\nID, ENCOUNTER, PATIENT, CODE\nDate fields:\nSTART, STOP\nRelation fields:\nencounters.ID ↔ careplans.ENCOUNTER  \npatients.ID ↔ careplans.PATIENT  \n"
+  },
+  {
+    "id": "conditions_full",
+    "metadata": {
+      "table_name": "conditions",
+      "section": "full",
+      "columns_count": 6,
+      "relations_count": 2
+    },
+    "text": "Table: Conditions  \nThis table holds a list of records for patient's conditions (SNOMED Code).\nColumns:\n– START (start date of condition)  \n– STOP (stop date of condition)  \n– PATIENT (FK → patients.ID)  \n– ENCOUNTER (FK → encounters.ID)  \n– CODE (SNOMED code)  \n– DESCRIPTION (description of code)  \nIdentification fields:\nENCOUNTER, PATIENT, CODE\nDate fields:\nSTART, STOP\nRelation fields:\nencounters.ID ↔ conditions.ENCOUNTER  \npatients.ID ↔ conditions.PATIENT  \n"
+  },
+  {
+    "id": "devices_full",
+    "metadata": {
+      "table_name": "devices",
+      "section": "full",
+      "columns_count": 7,
+      "relations_count": 2
+    },
+    "text": "Table: Devices  \nThis table holds the list of patients who underwent device implantation.\nColumns:\n– START (implant start date)  \n– STOP (implant stop date)  \n– PATIENT (FK → patients.ID)  \n– ENCOUNTER (FK → encounters.ID)  \n– CODE (SNOMED code)  \n– DESCRIPTION (description of code)  \n– UDI (unique device identifier)  \nIdentification fields:\nENCOUNTER, PATIENT, CODE\nDate fields:\nSTART, STOP\nRelation fields:\nencounters.ID ↔ devices.ENCOUNTER  \npatients.ID ↔ devices.PATIENT  \n"
+  },
+  {
+    "id": "encounters_full",
+    "metadata": {
+      "table_name": "encounters",
+      "section": "full",
+      "columns_count": 15,
+      "relations_count": 9
+    },
+    "text": "Table: Encounters  \nThis table holds the details of the patient's diagnosis (SNOMED Code) with its description along with the encounter class.\nColumns:\n– ID (unique encounter identifier)  \n– START (start date of encounter)  \n– STOP (stop date of encounter)  \n– PATIENT (FK → patients.ID)  \n– ORGANIZATION (FK → organizations.ID)  \n– PROVIDER (FK → providers.ID)  \n– PAYER (FK → payers.ID)  \n– ENCOUNTERCLASS (admission class)  \n– CODE (SNOMED code for reason of visit)  \n– DESCRIPTION (description of SNOMED code)  \n– BASE_ENCOUNTER_COST (base cost)  \n– TOTAL_CLAIM_COST (total claim cost)  \n– PAYER_COVERAGE (coverage amount)  \n– REASONCODE (SNOMED code for diagnosis)  \n– REASONDESCRIPTION (description of diagnosis code)  \nIdentification fields:\nID, PATIENT, CODE, REASONCODE\nDate fields:\nSTART, STOP\nRelation fields:\nencounters.ID ↔ allergies.ENCOUNTER  \nencounters.ID ↔ conditions.ENCOUNTER  \nencounters.ID ↔ devices.ENCOUNTER  \nencounters.ID ↔ imaging_studies.ENCOUNTER  \nencounters.ID ↔ immunizations.ENCOUNTER  \nencounters.ID ↔ medications.ENCOUNTER  \nencounters.ID ↔ careplans.ENCOUNTER  \nencounters.ID ↔ observations.ENCOUNTER  \nencounters.ID ↔ procedures.ENCOUNTER  \n"
+  },
+  {
+    "id": "imaging_studies_full",
+    "metadata": {
+      "table_name": "imaging_studies",
+      "section": "full",
+      "columns_count": 10,
+      "relations_count": 2
+    },
+    "text": "Table: Imaging_Studies  \nThis table holds the list of radiology study records for patients.\nColumns:\n– ID (unique study identifier)  \n– DATE (study date)  \n– PATIENT (FK → patients.ID)  \n– ENCOUNTER (FK → encounters.ID)  \n– BODYSITE_CODE (body site code)  \n– BODYSITE_DESCRIPTION (body site description)  \n– MODALITY_CODE (modality code)  \n– MODALITY_DESCRIPTION (modality description)  \n– SOP_CODE (DICOM SOP Class UID)  \n– SOP_DESCRIPTION (SOP description)  \nIdentification fields:\nID, ENCOUNTER, PATIENT\nDate fields:\nDATE\nRelation fields:\nencounters.ID ↔ imaging_studies.ENCOUNTER  \npatients.ID ↔ imaging_studies.PATIENT  \n"
+  },
+  {
+    "id": "immunizations_full",
+    "metadata": {
+      "table_name": "immunizations",
+      "section": "full",
+      "columns_count": 6,
+      "relations_count": 2
+    },
+    "text": "Table: Immunizations  \nThis table holds the list of patient vaccinations.\nColumns:\n– DATE (vaccination date)  \n– PATIENT (FK → patients.ID)  \n– ENCOUNTER (FK → encounters.ID)  \n– CODE (CVX code)  \n– DESCRIPTION (vaccine description)  \n– BASE_COST (base cost)  \nIdentification fields:\nENCOUNTER, PATIENT\nDate fields:\nDATE\nRelation fields:\nencounters.ID ↔ immunizations.ENCOUNTER  \npatients.ID ↔ immunizations.PATIENT  \n"
+  },
+  {
+    "id": "medications_full",
+    "metadata": {
+      "table_name": "medications",
+      "section": "full",
+      "columns_count": 13,
+      "relations_count": 3
+    },
+    "text": "Table: Medications  \nThis table holds the list of patient medications with cost and coverage.\nColumns:\n– START (medication start date)  \n– STOP (medication stop date)  \n– PATIENT (FK → patients.ID)  \n– PAYER (FK → payers.ID)  \n– ENCOUNTER (FK → encounters.ID)  \n– CODE (drug code)  \n– DESCRIPTION (drug description)  \n– BASE_COST (base cost)  \n– PAYER_COVERAGE (coverage amount)  \n– DISPENSES (quantity dispensed)  \n– TOTALCOST (total cost)  \n– REASONCODE (diagnosis code)  \n– REASONDESCRIPTION (diagnosis description)  \nIdentification fields:\nENCOUNTER, PATIENT\nDate fields:\nSTART, STOP\nRelation fields:\nencounters.ID ↔ medications.ENCOUNTER  \npatients.ID ↔ medications.PATIENT  \npayers.ID ↔ medications.PAYER  \n"
+  },
+  {
+    "id": "observations_full",
+    "metadata": {
+      "table_name": "observations",
+      "section": "full",
+      "columns_count": 8,
+      "relations_count": 2
+    },
+    "text": "Table: Observations  \nThis table holds patient vitals and observation readings.\nColumns:\n– DATE (observation date)  \n– PATIENT (FK → patients.ID)  \n– ENCOUTER (FK → encounters.ID)  \n– CODE (LOINC code)  \n– DESCRIPTION (observation description)  \n– VALUE (reading value)  \n– UNITS (measurement units)  \n– TYPE (data type)  \nIdentification fields:\nENCOUTER, PATIENT\nDate fields:\nDATE\nRelation fields:\nencounters.ID ↔ observations.ENCOUTER  \npatients.ID ↔ observations.PATIENT  \n"
+  },
+  {
+    "id": "organizations_full",
+    "metadata": {
+      "table_name": "organizations",
+      "section": "full",
+      "columns_count": 10,
+      "relations_count": 2
+    },
+    "text": "Table: Organizations  \nThis table holds organization details like name, address, and revenue.\nColumns:\n– ID (unique organization identifier)  \n– NAME (organization name)  \n– ADDRESS (street address)  \n– CITY (city)  \n– STATE (state)  \n– ZIP (postal code)  \n– LAT (latitude)  \n– LON (longitude)  \n– PHONE (contact number)  \n– REVENUE (revenue amount)  \nIdentification fields:\nID\nRelation fields:\norganizations.ID ↔ encounters.ORGANIZATION  \norganizations.ID ↔ providers.ORGANIZATION  \n"
+  },
+  {
+    "id": "patients_full",
+    "metadata": {
+      "table_name": "patients",
+      "section": "full",
+      "columns_count": 25,
+      "relations_count": 11
+    },
+    "text": "Table: Patients  \nThis table holds the list of patients' details with personal information like SSN, ID, name, birthdate etc.\nColumns:\n– ID (unique patient identifier)  \n– BIRTHDATE (patient's birth date)  \n– DEATHDATE (patient's death date)  \n– SSN (Social Security Number)  \n– DRIVERS (driver's license number)  \n– PASSPORT (passport number)  \n– PREFIX (name prefix: Mr./Mrs./Miss)  \n– FIRST (first name)  \n– LAST (last name)  \n– SUFFIX (name suffix/degree)  \n– MAIDEN (maiden name)  \n– MARTIAL (marital status: M/S)  \n– RACE (race)  \n– ETHINICITY (ethnicity)  \n– GENDER (sex: M/F)  \n– BIRTHPLACE (place of birth)  \n– ADDRESS (current address)  \n– CITY (city)  \n– STATE (state)  \n– COUNTY (county)  \n– ZIP (postal code)  \n– LAT (latitude)  \n– LON (longitude)  \n– HEALTHCARE_EXPENSES (total expenses)  \n– HEALTHCARE_COVERAGE (total coverages)  \nIdentification fields:\nID, SSN, DRIVERS, PASSPORT\nDate fields:\nBIRTHDATE, DEATHDATE\nRelation fields:\npatients.ID ↔ allergies.PATIENT  \npatients.ID ↔ encounters.PATIENT  \npatients.ID ↔ devices.PATIENT  \npatients.ID ↔ conditions.PATIENT  \npatients.ID ↔ medications.PATIENT  \npatients.ID ↔ imaging_studies.PATIENT  \npatients.ID ↔ immunizations.PATIENT  \npatients.ID ↔ procedures.PATIENT  \npatients.ID ↔ observations.PATIENT  \npatients.ID ↔ payer_transitions.PATIENT  \npatients.ID ↔ careplans.PATIENT  \n"
+  },
+  {
+    "id": "payer_transitions_full",
+    "metadata": {
+      "table_name": "payer_transitions",
+      "section": "full",
+      "columns_count": 5,
+      "relations_count": 2
+    },
+    "text": "Table: Payer_Transitions  \nThis table holds insurance enrollment records for patients.\nColumns:\n– PATIENT (FK → patients.ID)  \n– START_YEAR (insurance start year)  \n– END_YEAR (insurance end year)  \n– PAYER (FK → payers.ID)  \n– OWNERSHIP (policy ownership)  \nIdentification fields:\nPAYER, PATIENT\nDate fields:\nSTART_YEAR, END_YEAR\nRelation fields:\npayers.ID ↔ payer_transitions.PAYER  \npatients.ID ↔ payer_transitions.PATIENT  \n"
+  },
+  {
+    "id": "payers_full",
+    "metadata": {
+      "table_name": "payers",
+      "section": "full",
+      "columns_count": 19,
+      "relations_count": 3
+    },
+    "text": "Table: Payers  \nThis table holds payer (insurance) details and coverage metrics.\nColumns:\n– ID (unique payer identifier)  \n– NAME (payer name)  \n– ADDRESS (street address)  \n– CITY (city)  \n– STATE_HEADQUARTERED (headquarters state)  \n– ZIP (postal code)  \n– PHONE (contact number)  \n– AMOUNT_COVERED (covered amount)  \n– AMOUNT_UNCOVERED (uncovered amount)  \n– REVENUE (revenue)  \n– COVERED_ENCOUTERS (covered encounter count)  \n– UNCOVERED_ENCOUNTERS (uncovered encounter count)  \n– COVERED_MEDICATIONS (covered medication count)  \n– UNCOVERED_MEDICATIONS (uncovered medication count)  \n– COVERED_PROCEDURES (covered procedure count)  \n– UNCOVERED_PROCEDURES (uncovered procedure count)  \n– COVERED_IMMUNIZATIONS (covered immunization count)  \n– UNCOVERED_IMMUNIZATIONS (uncovered immunization count)  \n– UNIQUE_CUSTOMERS (unique customer count)  \nIdentification fields:\nID\nRelation fields:\npayers.ID ↔ payer_transitions.PAYER  \npayers.ID ↔ encounters.PAYER  \npayers.ID ↔ medications.PAYER  \n"
+  },
+  {
+    "id": "procedures_full",
+    "metadata": {
+      "table_name": "procedures",
+      "section": "full",
+      "columns_count": 8,
+      "relations_count": 2
+    },
+    "text": "Table: Procedures  \nThis table holds the list of procedures performed for patients.\nColumns:\n– DATE (procedure date)  \n– PATIENT (FK → patients.ID)  \n– ENCOUNTER (FK → encounters.ID)  \n– CODE (SNOMED code)  \n– DESCRIPTION (procedure description)  \n– BASE_COST (base cost)  \n– REASONCODE (reason code)  \n– REASONDESCRIPTION (reason description)  \nIdentification fields:\nENCOUNTER, PATIENT\nDate fields:\nDATE\nRelation fields:\nencounters.ID ↔ procedures.ENCOUNTER  \npatients.ID ↔ procedures.PATIENT  \n"
+  },
+  {
+    "id": "providers_full",
+    "metadata": {
+      "table_name": "providers",
+      "section": "full",
+      "columns_count": 11,
+      "relations_count": 2
+    },
+    "text": "Table: Providers  \nThis table holds provider details including name, specialty, and location.\nColumns:\n– ID (unique provider identifier)  \n– ORGANIZATION (FK → organizations.ID)  \n– NAME (provider name)  \n– GENDER (provider gender)  \n– SPECIALITY (clinical specialty)  \n– ADDRESS (street address)  \n– CITY (city)  \n– STATE (state)  \n– ZIP (postal code)  \n– LAT (latitude)  \n– LON (longitude)  \nIdentification fields:\nID\nRelation fields:\nproviders.ID ↔ encounters.PROVIDER  \norganizations.ID ↔ providers.ORGANIZATION  \n"
+  }
+]

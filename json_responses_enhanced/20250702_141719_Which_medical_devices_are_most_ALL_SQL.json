@@ -1,0 +1,105 @@
+{
+  "query_metadata": {
+    "original_query": "Which medical devices are most commonly implanted and what conditions lead to their use?",
+    "timestamp": "2025-07-02T14:17:19.820537",
+    "session_id": "comprehensive_sql_20250702_141700",
+    "filename": "20250702_141719_Which_medical_devices_are_most_ALL_SQL.json",
+    "agent_type": "enhanced_structured_rag",
+    "sql_capture_method": "comprehensive_all_sources"
+  },
+  "sql_comprehensive": {
+    "total_sql_queries_found": 4,
+    "unique_sql_queries": 1,
+    "sql_summary": {
+      "total_queries": 4,
+      "unique_queries": 1,
+      "query_types": {
+        "SELECT": 4
+      },
+      "sources": {
+        "agent_message_4:sql_prefix:message_index_4": 2,
+        "agent_message_4:raw_select_with_semicolon:message_index_4": 2
+      },
+      "average_length": 142.0
+    },
+    "extraction_log": [
+      "[agent_message_4:sql_prefix:message_index_4] SELECT DEVICE_NAME, COUNT(*) AS USAGE_COUNT, CONDI...",
+      "[agent_message_4:raw_select_with_semicolon:message_index_4] SELECT DEVICE_NAME, COUNT(*) AS USAGE_COUNT, CONDI...",
+      "[agent_message_4:sql_prefix:message_index_4] SELECT DEVICE_NAME, COUNT(*) AS USAGE_COUNT, CONDI...",
+      "[agent_message_4:raw_select_with_semicolon:message_index_4] SELECT DEVICE_NAME, COUNT(*) AS USAGE_COUNT, CONDI..."
+    ],
+    "all_sql_queries": [
+      {
+        "sql": "SELECT DEVICE_NAME, COUNT(*) AS USAGE_COUNT, CONDITION FROM MEDICAL_DEVICES GROUP BY DEVICE_NAME, CONDITION ORDER BY USAGE_COUNT DESC LIMIT 5;",
+        "source": "agent_message_4:sql_prefix:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T14:17:19.820239",
+        "length": 142,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT DEVICE_NAME, COUNT(*) AS USAGE_COUNT, CONDITION FROM MEDICAL_DEVICES GROUP BY DEVICE_NAME, CONDITION ORDER BY USAGE_COUNT DESC LIMIT 5;",
+        "source": "agent_message_4:raw_select_with_semicolon:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T14:17:19.820271",
+        "length": 142,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT DEVICE_NAME, COUNT(*) AS USAGE_COUNT, CONDITION FROM MEDICAL_DEVICES GROUP BY DEVICE_NAME, CONDITION ORDER BY USAGE_COUNT DESC LIMIT 5;",
+        "source": "agent_message_4:sql_prefix:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T14:17:19.820660",
+        "length": 142,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT DEVICE_NAME, COUNT(*) AS USAGE_COUNT, CONDITION FROM MEDICAL_DEVICES GROUP BY DEVICE_NAME, CONDITION ORDER BY USAGE_COUNT DESC LIMIT 5;",
+        "source": "agent_message_4:raw_select_with_semicolon:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T14:17:19.820687",
+        "length": 142,
+        "query_type": "SELECT"
+      }
+    ],
+    "unique_sql_queries_list": [
+      {
+        "sql": "SELECT DEVICE_NAME, COUNT(*) AS USAGE_COUNT, CONDITION FROM MEDICAL_DEVICES GROUP BY DEVICE_NAME, CONDITION ORDER BY USAGE_COUNT DESC LIMIT 5;",
+        "source": "agent_message_4:sql_prefix:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T14:17:19.820239",
+        "length": 142,
+        "query_type": "SELECT"
+      }
+    ]
+  },
+  "response": {
+    "success": true,
+    "message": "It seems the \"MEDICAL_DEVICES\" table does not exist in the database. Could you clarify or provide more details about where this information might be stored? For example, is it part of a different table or dataset?",
+    "query_understanding": "Enhanced analysis of: Which medical devices are most commonly implanted and what conditions lead to their use?",
+    "sql_query": null,
+    "result_count": 0,
+    "results": [],
+    "business_insights": [],
+    "metadata": {
+      "agent_type": "enhanced_structured_rag",
+      "vector_db_used": true,
+      "structured_chunks": true,
+      "success_score": 1,
+      "error_score": 1,
+      "has_business_context": false,
+      "uppercase_columns_enforced": true
+    }
+  },
+  "original_agent_result": {
+    "message_count": 6,
+    "has_tool_calls": true
+  },
+  "system_info": {
+    "vector_db_type": "structured_faiss",
+    "embedding_model": "text-embedding-3-large",
+    "chat_model": "gpt-4o",
+    "comprehensive_sql_capture": true,
+    "sql_extraction_patterns": 20
+  }
+}

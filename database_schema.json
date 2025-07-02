@@ -1,0 +1,1650 @@
+{
+  "database_name": "sample",
+  "extraction_timestamp": null,
+  "schemas": {
+    "public": {
+      "tables": {
+        "allergies": {
+          "columns": [
+            {
+              "column_name": "START",
+              "data_type": "date",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 1
+            },
+            {
+              "column_name": "STOP",
+              "data_type": "date",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 2
+            },
+            {
+              "column_name": "PATIENT",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 3
+            },
+            {
+              "column_name": "ENCOUNTER",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 4
+            },
+            {
+              "column_name": "CODE",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 5
+            },
+            {
+              "column_name": "DESCRIPTION",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 6
+            }
+          ]
+        },
+        "careplans": {
+          "columns": [
+            {
+              "column_name": "ID",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 1
+            },
+            {
+              "column_name": "START",
+              "data_type": "date",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 2
+            },
+            {
+              "column_name": "STOP",
+              "data_type": "date",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 3
+            },
+            {
+              "column_name": "PATIENT",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 4
+            },
+            {
+              "column_name": "ENCOUNTER",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 5
+            },
+            {
+              "column_name": "CODE",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 6
+            },
+            {
+              "column_name": "DESCRIPTION",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 7
+            },
+            {
+              "column_name": "REASONCODE",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 8
+            },
+            {
+              "column_name": "REASONDESCRIPTION",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 9
+            }
+          ]
+        },
+        "conditions": {
+          "columns": [
+            {
+              "column_name": "START",
+              "data_type": "date",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 1
+            },
+            {
+              "column_name": "STOP",
+              "data_type": "date",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 2
+            },
+            {
+              "column_name": "PATIENT",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 3
+            },
+            {
+              "column_name": "ENCOUNTER",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 4
+            },
+            {
+              "column_name": "CODE",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 5
+            },
+            {
+              "column_name": "DESCRIPTION",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 6
+            }
+          ]
+        },
+        "devices": {
+          "columns": [
+            {
+              "column_name": "START",
+              "data_type": "date",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 1
+            },
+            {
+              "column_name": "STOP",
+              "data_type": "date",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 2
+            },
+            {
+              "column_name": "PATIENT",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 3
+            },
+            {
+              "column_name": "ENCOUNTER",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 4
+            },
+            {
+              "column_name": "CODE",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 5
+            },
+            {
+              "column_name": "DESCRIPTION",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 6
+            },
+            {
+              "column_name": "UDI",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 7
+            }
+          ]
+        },
+        "encounters": {
+          "columns": [
+            {
+              "column_name": "ID",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 1
+            },
+            {
+              "column_name": "START",
+              "data_type": "date",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 2
+            },
+            {
+              "column_name": "STOP",
+              "data_type": "date",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 3
+            },
+            {
+              "column_name": "PATIENT",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 4
+            },
+            {
+              "column_name": "ORGANIZATION",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 5
+            },
+            {
+              "column_name": "PROVIDER",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 6
+            },
+            {
+              "column_name": "PAYER",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 7
+            },
+            {
+              "column_name": "ENCOUNTERCLASS",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 8
+            },
+            {
+              "column_name": "CODE",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 9
+            },
+            {
+              "column_name": "DESCRIPTION",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 10
+            },
+            {
+              "column_name": "BASE_ENCOUNTER_COST",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 11
+            },
+            {
+              "column_name": "TOTAL_CLAIM_COST",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 12
+            },
+            {
+              "column_name": "PAYER_COVERAGE",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 13
+            },
+            {
+              "column_name": "REASONCODE",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 14
+            },
+            {
+              "column_name": "REASONDESCRIPTION",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 15
+            }
+          ]
+        },
+        "imaging_studies": {
+          "columns": [
+            {
+              "column_name": "ID",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 1
+            },
+            {
+              "column_name": "DATE",
+              "data_type": "date",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 2
+            },
+            {
+              "column_name": "PATIENT",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 3
+            },
+            {
+              "column_name": "ENCOUNTER",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 4
+            },
+            {
+              "column_name": "BODYSITE_CODE",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 5
+            },
+            {
+              "column_name": "BODYSITE_DESCRIPTION",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 6
+            },
+            {
+              "column_name": "MODALITY_CODE",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 7
+            },
+            {
+              "column_name": "MODALITY_DESCRIPTION",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 8
+            },
+            {
+              "column_name": "SOP_CODE",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 9
+            },
+            {
+              "column_name": "SOP_DESCRIPTION",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 10
+            }
+          ]
+        },
+        "immunizations": {
+          "columns": [
+            {
+              "column_name": "DATE",
+              "data_type": "date",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 1
+            },
+            {
+              "column_name": "PATIENT",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 2
+            },
+            {
+              "column_name": "ENCOUNTER",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 3
+            },
+            {
+              "column_name": "CODE",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 4
+            },
+            {
+              "column_name": "DESCRIPTION",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 5
+            },
+            {
+              "column_name": "BASE_COST",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 6
+            }
+          ]
+        },
+        "medications": {
+          "columns": [
+            {
+              "column_name": "START",
+              "data_type": "date",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 1
+            },
+            {
+              "column_name": "STOP",
+              "data_type": "date",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 2
+            },
+            {
+              "column_name": "PATIENT",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 3
+            },
+            {
+              "column_name": "PAYER",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 4
+            },
+            {
+              "column_name": "ENCOUNTER",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 5
+            },
+            {
+              "column_name": "CODE",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 6
+            },
+            {
+              "column_name": "DESCRIPTION",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 7
+            },
+            {
+              "column_name": "BASE_COST",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 8
+            },
+            {
+              "column_name": "PAYER_COVERAGE",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 9
+            },
+            {
+              "column_name": "DISPENSES",
+              "data_type": "integer",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 32,
+              "numeric_scale": 0,
+              "ordinal_position": 10
+            },
+            {
+              "column_name": "TOTALCOST",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 11
+            },
+            {
+              "column_name": "REASONCODE",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 12
+            },
+            {
+              "column_name": "REASONDESCRIPTION",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 13
+            }
+          ]
+        },
+        "observations": {
+          "columns": [
+            {
+              "column_name": "DATE",
+              "data_type": "date",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 1
+            },
+            {
+              "column_name": "PATIENT",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 2
+            },
+            {
+              "column_name": "ENCOUTER",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 3
+            },
+            {
+              "column_name": "CODE",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 4
+            },
+            {
+              "column_name": "DESCRIPTION",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 5
+            },
+            {
+              "column_name": "VALUE",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 6
+            },
+            {
+              "column_name": "UNITS",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 7
+            },
+            {
+              "column_name": "TYPE",
+              "data_type": "text",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 8
+            }
+          ]
+        },
+        "organizations": {
+          "columns": [
+            {
+              "column_name": "ID",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 1
+            },
+            {
+              "column_name": "NAME",
+              "data_type": "text",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 2
+            },
+            {
+              "column_name": "ADDRESS",
+              "data_type": "text",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 3
+            },
+            {
+              "column_name": "CITY",
+              "data_type": "text",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 4
+            },
+            {
+              "column_name": "STATE",
+              "data_type": "text",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 5
+            },
+            {
+              "column_name": "ZIP",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 6
+            },
+            {
+              "column_name": "LAT",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 7
+            },
+            {
+              "column_name": "LON",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 8
+            },
+            {
+              "column_name": "PHONE",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 9
+            },
+            {
+              "column_name": "REVENUE",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 10
+            }
+          ]
+        },
+        "patients": {
+          "columns": [
+            {
+              "column_name": "PATIENT_ID",
+              "data_type": "character varying",
+              "is_nullable": "NO",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 1
+            },
+            {
+              "column_name": "BIRTHDATE",
+              "data_type": "date",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 2
+            },
+            {
+              "column_name": "DEATHDATE",
+              "data_type": "date",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 3
+            },
+            {
+              "column_name": "SSN",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 4
+            },
+            {
+              "column_name": "DRIVERS",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 5
+            },
+            {
+              "column_name": "PASSPORT",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 6
+            },
+            {
+              "column_name": "PREFIX",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 7
+            },
+            {
+              "column_name": "FIRST",
+              "data_type": "text",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 8
+            },
+            {
+              "column_name": "LAST",
+              "data_type": "text",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 9
+            },
+            {
+              "column_name": "SUFFIX",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 10
+            },
+            {
+              "column_name": "MAIDEN",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 11
+            },
+            {
+              "column_name": "MARTIAL",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 12
+            },
+            {
+              "column_name": "RACE",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 13
+            },
+            {
+              "column_name": "ETHINICITY",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 14
+            },
+            {
+              "column_name": "GENDER",
+              "data_type": "character",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": 1,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 15
+            },
+            {
+              "column_name": "BIRTHPLACE",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 16
+            },
+            {
+              "column_name": "ADDRESS",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 17
+            },
+            {
+              "column_name": "CITY",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 18
+            },
+            {
+              "column_name": "STATE",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 19
+            },
+            {
+              "column_name": "COUNTY",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 20
+            },
+            {
+              "column_name": "ZIP",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 21
+            },
+            {
+              "column_name": "LAT",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 22
+            },
+            {
+              "column_name": "LON",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 23
+            },
+            {
+              "column_name": "HEALTHCARE_EXPENSES",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 24
+            },
+            {
+              "column_name": "HEALTHCARE_COVERAGE",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 25
+            }
+          ]
+        },
+        "payer_transitions": {
+          "columns": [
+            {
+              "column_name": "PATIENT",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 1
+            },
+            {
+              "column_name": "START_YEAR",
+              "data_type": "integer",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 32,
+              "numeric_scale": 0,
+              "ordinal_position": 2
+            },
+            {
+              "column_name": "END_YEAR",
+              "data_type": "integer",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 32,
+              "numeric_scale": 0,
+              "ordinal_position": 3
+            },
+            {
+              "column_name": "PAYER",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 4
+            },
+            {
+              "column_name": "OWNERSHIP",
+              "data_type": "text",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 5
+            }
+          ]
+        },
+        "payers": {
+          "columns": [
+            {
+              "column_name": "ID",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 1
+            },
+            {
+              "column_name": "NAME",
+              "data_type": "text",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 2
+            },
+            {
+              "column_name": "ADDRESS",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 3
+            },
+            {
+              "column_name": "CITY",
+              "data_type": "text",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 4
+            },
+            {
+              "column_name": "STATE_HEADQUARTERED",
+              "data_type": "text",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 5
+            },
+            {
+              "column_name": "ZIP",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 6
+            },
+            {
+              "column_name": "PHONE",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 7
+            },
+            {
+              "column_name": "AMOUNT_COVERED",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 8
+            },
+            {
+              "column_name": "AMOUNT_UNCOVERED",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 9
+            },
+            {
+              "column_name": "REVENUE",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 10
+            },
+            {
+              "column_name": "COVERED_ENCOUTERS",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 11
+            },
+            {
+              "column_name": "UNCOVERED_ENCOUNTERS",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 12
+            },
+            {
+              "column_name": "COVERED_MEDICATIONS",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 13
+            },
+            {
+              "column_name": "UNCOVERED_MEDICATIONS",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 14
+            },
+            {
+              "column_name": "COVERED_PROCEDURES",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 15
+            },
+            {
+              "column_name": "UNCOVERED_PROCEDURES",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 16
+            },
+            {
+              "column_name": "COVERED_IMMUNIZATIONS",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 17
+            },
+            {
+              "column_name": "UNCOVERED_IMMUNIZATIONS",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 18
+            },
+            {
+              "column_name": "UNIQUE_CUSTOMERS",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 19
+            }
+          ]
+        },
+        "procedures": {
+          "columns": [
+            {
+              "column_name": "DATE",
+              "data_type": "date",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 1
+            },
+            {
+              "column_name": "PATIENT",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 2
+            },
+            {
+              "column_name": "ENCOUNTER",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 3
+            },
+            {
+              "column_name": "CODE",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 4
+            },
+            {
+              "column_name": "DESCRIPTION",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 5
+            },
+            {
+              "column_name": "BASE_COST",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 6
+            },
+            {
+              "column_name": "REASONCODE",
+              "data_type": "bigint",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": 64,
+              "numeric_scale": 0,
+              "ordinal_position": 7
+            },
+            {
+              "column_name": "REASONDESCRIPTION",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 8
+            }
+          ]
+        },
+        "providers": {
+          "columns": [
+            {
+              "column_name": "ID",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 1
+            },
+            {
+              "column_name": "ORGANIZATION",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 2
+            },
+            {
+              "column_name": "NAME",
+              "data_type": "text",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 3
+            },
+            {
+              "column_name": "GENDER",
+              "data_type": "\"char\"",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 4
+            },
+            {
+              "column_name": "SPECIALITY",
+              "data_type": "text",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 5
+            },
+            {
+              "column_name": "ADDRESS",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 6
+            },
+            {
+              "column_name": "CITY",
+              "data_type": "text",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 7
+            },
+            {
+              "column_name": "STATE",
+              "data_type": "text",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 8
+            },
+            {
+              "column_name": "ZIP",
+              "data_type": "character varying",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 9
+            },
+            {
+              "column_name": "LAT",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 10
+            },
+            {
+              "column_name": "LON",
+              "data_type": "numeric",
+              "is_nullable": "YES",
+              "column_default": null,
+              "character_maximum_length": null,
+              "numeric_precision": null,
+              "numeric_scale": null,
+              "ordinal_position": 11
+            }
+          ]
+        }
+      }
+    }
+  }
+}

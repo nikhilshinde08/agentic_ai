@@ -1,0 +1,178 @@
+{
+  "query_metadata": {
+    "original_query": "Which medical devices are most commonly implanted and what conditions lead to their use?",
+    "timestamp": "2025-07-02T19:58:54.060491",
+    "session_id": "comprehensive_sql_20250702_195831",
+    "filename": "20250702_195854_Which_medical_devices_are_most_ALL_SQL.json",
+    "agent_type": "enhanced_structured_rag",
+    "sql_capture_method": "comprehensive_all_sources"
+  },
+  "sql_comprehensive": {
+    "total_sql_queries_found": 10,
+    "unique_sql_queries": 3,
+    "sql_summary": {
+      "total_queries": 10,
+      "unique_queries": 3,
+      "query_types": {
+        "SELECT": 10
+      },
+      "sources": {
+        "agent_message_2:raw_select_no_semicolon:message_index_2": 2,
+        "agent_message_4:sql_prefix:message_index_4": 2,
+        "agent_message_4:raw_select_with_semicolon:message_index_4": 2,
+        "agent_message_6:sql_prefix:message_index_6": 2,
+        "agent_message_6:raw_select_with_semicolon:message_index_6": 2
+      },
+      "average_length": 90.4
+    },
+    "extraction_log": [
+      "[agent_message_2:raw_select_no_semicolon:message_index_2] SELECT statement using these tables....",
+      "[agent_message_4:sql_prefix:message_index_4] SELECT CODE, COUNT(CODE) AS USAGE_COUNT FROM DEVIC...",
+      "[agent_message_4:raw_select_with_semicolon:message_index_4] SELECT CODE, COUNT(CODE) AS USAGE_COUNT FROM DEVIC...",
+      "[agent_message_6:sql_prefix:message_index_6] SELECT DEVICE, COUNT(DEVICE) AS USAGE_COUNT FROM D...",
+      "[agent_message_6:raw_select_with_semicolon:message_index_6] SELECT DEVICE, COUNT(DEVICE) AS USAGE_COUNT FROM D...",
+      "[agent_message_2:raw_select_no_semicolon:message_index_2] SELECT statement using these tables....",
+      "[agent_message_4:sql_prefix:message_index_4] SELECT CODE, COUNT(CODE) AS USAGE_COUNT FROM DEVIC...",
+      "[agent_message_4:raw_select_with_semicolon:message_index_4] SELECT CODE, COUNT(CODE) AS USAGE_COUNT FROM DEVIC...",
+      "[agent_message_6:sql_prefix:message_index_6] SELECT DEVICE, COUNT(DEVICE) AS USAGE_COUNT FROM D...",
+      "[agent_message_6:raw_select_with_semicolon:message_index_6] SELECT DEVICE, COUNT(DEVICE) AS USAGE_COUNT FROM D..."
+    ],
+    "all_sql_queries": [
+      {
+        "sql": "SELECT statement using these tables.",
+        "source": "agent_message_2:raw_select_no_semicolon:message_index_2",
+        "context": "message_index_2",
+        "timestamp": "2025-07-02T19:58:54.059514",
+        "length": 36,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT CODE, COUNT(CODE) AS USAGE_COUNT FROM DEVICES GROUP BY CODE ORDER BY USAGE_COUNT DESC LIMIT 5;",
+        "source": "agent_message_4:sql_prefix:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T19:58:54.059594",
+        "length": 101,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT CODE, COUNT(CODE) AS USAGE_COUNT FROM DEVICES GROUP BY CODE ORDER BY USAGE_COUNT DESC LIMIT 5;",
+        "source": "agent_message_4:raw_select_with_semicolon:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T19:58:54.059637",
+        "length": 101,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT DEVICE, COUNT(DEVICE) AS USAGE_COUNT FROM DEVICES GROUP BY DEVICE ORDER BY USAGE_COUNT DESC LIMIT 5;",
+        "source": "agent_message_6:sql_prefix:message_index_6",
+        "context": "message_index_6",
+        "timestamp": "2025-07-02T19:58:54.059798",
+        "length": 107,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT DEVICE, COUNT(DEVICE) AS USAGE_COUNT FROM DEVICES GROUP BY DEVICE ORDER BY USAGE_COUNT DESC LIMIT 5;",
+        "source": "agent_message_6:raw_select_with_semicolon:message_index_6",
+        "context": "message_index_6",
+        "timestamp": "2025-07-02T19:58:54.059839",
+        "length": 107,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT statement using these tables.",
+        "source": "agent_message_2:raw_select_no_semicolon:message_index_2",
+        "context": "message_index_2",
+        "timestamp": "2025-07-02T19:58:54.060664",
+        "length": 36,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT CODE, COUNT(CODE) AS USAGE_COUNT FROM DEVICES GROUP BY CODE ORDER BY USAGE_COUNT DESC LIMIT 5;",
+        "source": "agent_message_4:sql_prefix:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T19:58:54.060720",
+        "length": 101,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT CODE, COUNT(CODE) AS USAGE_COUNT FROM DEVICES GROUP BY CODE ORDER BY USAGE_COUNT DESC LIMIT 5;",
+        "source": "agent_message_4:raw_select_with_semicolon:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T19:58:54.060758",
+        "length": 101,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT DEVICE, COUNT(DEVICE) AS USAGE_COUNT FROM DEVICES GROUP BY DEVICE ORDER BY USAGE_COUNT DESC LIMIT 5;",
+        "source": "agent_message_6:sql_prefix:message_index_6",
+        "context": "message_index_6",
+        "timestamp": "2025-07-02T19:58:54.060906",
+        "length": 107,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT DEVICE, COUNT(DEVICE) AS USAGE_COUNT FROM DEVICES GROUP BY DEVICE ORDER BY USAGE_COUNT DESC LIMIT 5;",
+        "source": "agent_message_6:raw_select_with_semicolon:message_index_6",
+        "context": "message_index_6",
+        "timestamp": "2025-07-02T19:58:54.060945",
+        "length": 107,
+        "query_type": "SELECT"
+      }
+    ],
+    "unique_sql_queries_list": [
+      {
+        "sql": "SELECT statement using these tables.",
+        "source": "agent_message_2:raw_select_no_semicolon:message_index_2",
+        "context": "message_index_2",
+        "timestamp": "2025-07-02T19:58:54.059514",
+        "length": 36,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT CODE, COUNT(CODE) AS USAGE_COUNT FROM DEVICES GROUP BY CODE ORDER BY USAGE_COUNT DESC LIMIT 5;",
+        "source": "agent_message_4:sql_prefix:message_index_4",
+        "context": "message_index_4",
+        "timestamp": "2025-07-02T19:58:54.059594",
+        "length": 101,
+        "query_type": "SELECT"
+      },
+      {
+        "sql": "SELECT DEVICE, COUNT(DEVICE) AS USAGE_COUNT FROM DEVICES GROUP BY DEVICE ORDER BY USAGE_COUNT DESC LIMIT 5;",
+        "source": "agent_message_6:sql_prefix:message_index_6",
+        "context": "message_index_6",
+        "timestamp": "2025-07-02T19:58:54.059798",
+        "length": 107,
+        "query_type": "SELECT"
+      }
+    ]
+  },
+  "response": {
+    "success": false,
+    "message": "It appears there is an issue with the column names in the DEVICES table. Based on the schema information provided earlier, the columns listed were START, STOP, PATIENT, ENCOUNTER, and CODE. However, the query is failing due to column name mismatches.\n\nUnfortunately, I cannot proceed further without clarification on the correct column names for identifying medical devices and their usage. If you have additional details or corrections, please let me know!",
+    "query_understanding": "Enhanced analysis of: Which medical devices are most commonly implanted and what conditions lead to their use?",
+    "sql_query": null,
+    "result_count": 0,
+    "results": [],
+    "business_insights": [],
+    "metadata": {
+      "agent_type": "enhanced_structured_rag",
+      "vector_db_used": true,
+      "structured_chunks": true,
+      "success_score": 0,
+      "error_score": 1,
+      "has_business_context": false,
+      "uppercase_columns_enforced": true
+    }
+  },
+  "original_agent_result": {
+    "message_count": 10,
+    "has_tool_calls": true
+  },
+  "system_info": {
+    "vector_db_type": "structured_faiss",
+    "embedding_model": "text-embedding-3-large",
+    "chat_model": "gpt-4o",
+    "comprehensive_sql_capture": true,
+    "sql_extraction_patterns": 20
+  }
+}

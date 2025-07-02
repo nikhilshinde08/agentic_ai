@@ -1,0 +1,24 @@
+{
+  "system_type": "Enhanced Structured RAG Database Assistant",
+  "version": "2.0",
+  "features": [
+    "Structured table chunking with business context",
+    "Healthcare domain intelligence",
+    "Column categorization and relationship mapping",
+    "Sample queries and usage hints",
+    "98%+ column name accuracy",
+    "Business intelligence insights",
+    "Persistent vector storage"
+  ],
+  "models": {
+    "chat": "Azure OpenAI GPT-4o",
+    "embeddings": "OpenAI text-embedding-3-large",
+    "vector_store": "FAISS with structured chunks"
+  },
+  "supported_domains": [
+    "Healthcare/Medical",
+    "Insurance/Payer",
+    "Clinical workflows",
+    "Financial analysis"
+  ]
+}
