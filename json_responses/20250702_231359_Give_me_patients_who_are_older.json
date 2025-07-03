@@ -1,0 +1,43 @@
+{
+  "query_metadata": {
+    "original_query": "Give me patients who are older that 15 and have a diabetes",
+    "timestamp": "2025-07-02T23:13:59.870679",
+    "session_id": "react_20250702_230923",
+    "filename": "20250702_231359_Give_me_patients_who_are_older.json"
+  },
+  "response": {
+    "success": false,
+    "answer": "I encountered an error while processing your question: Response parsing failed: 'list' object has no attribute 'get'",
+    "query_understanding": "Attempted to process: Give me patients who are older that 15 and have a diabetes",
+    "data": [],
+    "sql_generated": null,
+    "result_count": 0,
+    "metadata": {
+      "error_type": "processing_error",
+      "agent_type": "react_only",
+      "processing_time_seconds": 14.481638,
+      "session_id": "react_20250702_230923",
+      "query_number": 4
+    },
+    "timestamp": "2025-07-02T23:13:59.870634",
+    "powered_by": "LangGraph ReAct Agent",
+    "message": "I encountered an error while processing your question: Response parsing failed: 'list' object has no attribute 'get'",
+    "structured_response": {
+      "success": false,
+      "message": "I encountered an error while processing your question: Response parsing failed: 'list' object has no attribute 'get'",
+      "query_understanding": "Attempted to process: Give me patients who are older that 15 and have a diabetes",
+      "sql_query": null,
+      "result_count": 0,
+      "results": [],
+      "metadata": {
+        "error_type": "processing_error",
+        "agent_type": "react_only",
+        "processing_time_seconds": 14.481638,
+        "session_id": "react_20250702_230923",
+        "query_number": 4
+      },
+      "timestamp": "2025-07-02 23:13:59.870560",
+      "powered_by": "LangGraph ReAct Agent"
+    }
+  }
+}

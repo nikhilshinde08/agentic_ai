@@ -1,0 +1,82 @@
+{
+  "query_metadata": {
+    "original_query": "What are the most common medical conditions?",
+    "timestamp": "2025-07-02T21:05:48.254954",
+    "session_id": "langgraph_20250702_210516",
+    "filename": "20250702_210548_What_are_the_most_common_medic.json"
+  },
+  "response": {
+    "success": true,
+    "message": "Successfully retrieved the most common medical conditions.",
+    "query_understanding": "The user wants to know the most frequently occurring medical conditions in the database.",
+    "sql_query": "SELECT \"CONDITION_DESCRIPTION\", COUNT(*) as frequency FROM conditions GROUP BY \"CONDITION_DESCRIPTION\" ORDER BY frequency DESC LIMIT 10;",
+    "result_count": 10,
+    "results": [
+      {
+        "data": {
+          "value": "data={'CONDITION_DESCRIPTION': 'Viral sinusitis (disorder)', 'frequency': 1248}"
+        }
+      },
+      {
+        "data": {
+          "value": "data={'CONDITION_DESCRIPTION': 'Acute viral pharyngitis (disorder)', 'frequency': 653}"
+        }
+      },
+      {
+        "data": {
+          "value": "data={'CONDITION_DESCRIPTION': 'Acute bronchitis (disorder)', 'frequency': 563}"
+        }
+      },
+      {
+        "data": {
+          "value": "data={'CONDITION_DESCRIPTION': 'Normal pregnancy', 'frequency': 516}"
+        }
+      },
+      {
+        "data": {
+          "value": "data={'CONDITION_DESCRIPTION': 'Body mass index 30+ - obesity (finding)', 'frequency': 449}"
+        }
+      },
+      {
+        "data": {
+          "value": "data={'CONDITION_DESCRIPTION': 'Essential hypertension', 'frequency': 398}"
+        }
+      },
+      {
+        "data": {
+          "value": "data={'CONDITION_DESCRIPTION': 'Type 2 diabetes mellitus', 'frequency': 372}"
+        }
+      },
+      {
+        "data": {
+          "value": "data={'CONDITION_DESCRIPTION': 'Asthma', 'frequency': 341}"
+        }
+      },
+      {
+        "data": {
+          "value": "data={'CONDITION_DESCRIPTION': 'Depressive disorder', 'frequency': 298}"
+        }
+      },
+      {
+        "data": {
+          "value": "data={'CONDITION_DESCRIPTION': 'Hyperlipidemia', 'frequency': 287}"
+        }
+      }
+    ],
+    "metadata": {
+      "tables_used": [
+        "conditions"
+      ],
+      "query_type": "analysis",
+      "reasoning": "Grouped the conditions by their descriptions and counted their occurrences to identify the most common ones.",
+      "agent_type": "langgraph_react",
+      "dialect": "PostgreSQL",
+      "top_k_limit": 10,
+      "processing_time_seconds": 16.689741,
+      "session_id": "langgraph_20250702_210516",
+      "query_number": 1
+    },
+    "timestamp": "2025-07-02 21:05:48.254436",
+    "powered_by": "Azure OpenAI ReAct Agent"
+  }
+}

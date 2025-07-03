@@ -1,0 +1,47 @@
+{
+  "query_metadata": {
+    "original_query": "List medications prescribed for hypertension",
+    "timestamp": "2025-07-02T22:47:04.208204",
+    "session_id": "react_20250702_224610",
+    "filename": "20250702_224704_List_medications_prescribed_fo.json"
+  },
+  "response": {
+    "success": true,
+    "answer": "Here are some medications prescribed for patients with hypertension:\n\n1. Acetaminophen 325 MG Oral Tablet\n2. Acetaminophen 325 MG / HYDROcodone Bitartrate 7.5 MG Oral Tablet\n3. Penicillin V Potassium 250 MG Oral Tablet\n4. Liletta 52 MG Intrauterine System\n5. Ferrous sulfate 325 MG Oral Tablet\n\n...an...",
+    "query_understanding": "Processed healthcare query: List medications prescribed for hypertension",
+    "data": [],
+    "sql_generated": null,
+    "result_count": 1,
+    "metadata": {
+      "agent_type": "react_only",
+      "success_score": 1,
+      "error_score": 0,
+      "response_type": "text_analysis",
+      "processing_time_seconds": 7.740944,
+      "session_id": "react_20250702_224610",
+      "query_number": 2
+    },
+    "timestamp": "2025-07-02T22:47:04.208173",
+    "powered_by": "LangGraph ReAct Agent",
+    "message": "Here are some medications prescribed for patients with hypertension:\n\n1. Acetaminophen 325 MG Oral Tablet\n2. Acetaminophen 325 MG / HYDROcodone Bitartrate 7.5 MG Oral Tablet\n3. Penicillin V Potassium 250 MG Oral Tablet\n4. Liletta 52 MG Intrauterine System\n5. Ferrous sulfate 325 MG Oral Tablet\n\n...an...",
+    "structured_response": {
+      "success": true,
+      "message": "Here are some medications prescribed for patients with hypertension:\n\n1. Acetaminophen 325 MG Oral Tablet\n2. Acetaminophen 325 MG / HYDROcodone Bitartrate 7.5 MG Oral Tablet\n3. Penicillin V Potassium 250 MG Oral Tablet\n4. Liletta 52 MG Intrauterine System\n5. Ferrous sulfate 325 MG Oral Tablet\n\n...an...",
+      "query_understanding": "Processed healthcare query: List medications prescribed for hypertension",
+      "sql_query": null,
+      "result_count": 1,
+      "results": [],
+      "metadata": {
+        "agent_type": "react_only",
+        "success_score": 1,
+        "error_score": 0,
+        "response_type": "text_analysis",
+        "processing_time_seconds": 7.740944,
+        "session_id": "react_20250702_224610",
+        "query_number": 2
+      },
+      "timestamp": "2025-07-02 22:47:04.208119",
+      "powered_by": "LangGraph ReAct Agent"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "query_metadata": {
+    "original_query": "give me top 10 allergies and patients with multiple allergies and ongoing medications for it",
+    "timestamp": "2025-07-02T23:19:39.511449",
+    "session_id": "react_20250702_230923",
+    "filename": "20250702_231939_give_me_top_10_allergies_and_p.json"
+  },
+  "response": {
+    "success": true,
+    "answer": "Here is the analysis of allergies and patients with multiple allergies along with their ongoing medications:\n\n### Top 10 Allergies:\n1. **Allergy to mould** - 81 cases\n2. **Dander (animal) allergy** - 77 cases\n3. **Allergy to tree pollen** - 63 cases\n4. **House dust mite allergy** - 61 cases\n5. **All...",
+    "query_understanding": "Processed healthcare query: give me top 10 allergies and patients with multiple allergies and ongoing medications for it",
+    "data": [],
+    "sql_generated": null,
+    "result_count": 10,
+    "metadata": {
+      "agent_type": "react_only",
+      "success_score": 1,
+      "error_score": 0,
+      "response_type": "text_analysis",
+      "processing_time_seconds": 16.302047,
+      "session_id": "react_20250702_230923",
+      "query_number": 8
+    },
+    "timestamp": "2025-07-02T23:19:39.511370",
+    "powered_by": "LangGraph ReAct Agent",
+    "message": "Here is the analysis of allergies and patients with multiple allergies along with their ongoing medications:\n\n### Top 10 Allergies:\n1. **Allergy to mould** - 81 cases\n2. **Dander (animal) allergy** - 77 cases\n3. **Allergy to tree pollen** - 63 cases\n4. **House dust mite allergy** - 61 cases\n5. **All...",
+    "structured_response": {
+      "success": true,
+      "message": "Here is the analysis of allergies and patients with multiple allergies along with their ongoing medications:\n\n### Top 10 Allergies:\n1. **Allergy to mould** - 81 cases\n2. **Dander (animal) allergy** - 77 cases\n3. **Allergy to tree pollen** - 63 cases\n4. **House dust mite allergy** - 61 cases\n5. **All...",
+      "query_understanding": "Processed healthcare query: give me top 10 allergies and patients with multiple allergies and ongoing medications for it",
+      "sql_query": null,
+      "result_count": 10,
+      "results": [],
+      "metadata": {
+        "agent_type": "react_only",
+        "success_score": 1,
+        "error_score": 0,
+        "response_type": "text_analysis",
+        "processing_time_seconds": 16.302047,
+        "session_id": "react_20250702_230923",
+        "query_number": 8
+      },
+      "timestamp": "2025-07-02 23:19:39.511210",
+      "powered_by": "LangGraph ReAct Agent"
+    }
+  }
+}

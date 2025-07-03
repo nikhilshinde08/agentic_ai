@@ -1,0 +1,43 @@
+{
+  "query_metadata": {
+    "original_query": "Comprehensive Patient Profile for Clinical Decision Making",
+    "timestamp": "2025-07-02T23:06:35.425533",
+    "session_id": "react_20250702_230319",
+    "filename": "20250702_230635_Comprehensive_Patient_Profile_.json"
+  },
+  "response": {
+    "success": false,
+    "answer": "I encountered an error while processing your question: Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "query_understanding": "Attempted to process: Comprehensive Patient Profile for Clinical Decision Making",
+    "data": [],
+    "sql_generated": null,
+    "result_count": 0,
+    "metadata": {
+      "error_type": "processing_error",
+      "agent_type": "react_only",
+      "processing_time_seconds": 80.090921,
+      "session_id": "react_20250702_230319",
+      "query_number": 1
+    },
+    "timestamp": "2025-07-02T23:06:35.425470",
+    "powered_by": "LangGraph ReAct Agent",
+    "message": "I encountered an error while processing your question: Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "structured_response": {
+      "success": false,
+      "message": "I encountered an error while processing your question: Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+      "query_understanding": "Attempted to process: Comprehensive Patient Profile for Clinical Decision Making",
+      "sql_query": null,
+      "result_count": 0,
+      "results": [],
+      "metadata": {
+        "error_type": "processing_error",
+        "agent_type": "react_only",
+        "processing_time_seconds": 80.090921,
+        "session_id": "react_20250702_230319",
+        "query_number": 1
+      },
+      "timestamp": "2025-07-02 23:06:35.425263",
+      "powered_by": "LangGraph ReAct Agent"
+    }
+  }
+}

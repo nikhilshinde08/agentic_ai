@@ -1,0 +1,47 @@
+{
+  "query_metadata": {
+    "original_query": "rack patient outcomes for diabetes management",
+    "timestamp": "2025-07-02T23:11:20.390569",
+    "session_id": "react_20250702_230923",
+    "filename": "20250702_231120_rack_patient_outcomes_for_diab.json"
+  },
+  "response": {
+    "success": true,
+    "answer": "Here is the data related to tracking patient outcomes for diabetes management:\n\n### 1. **Conditions Related to Diabetes**\nPatients diagnosed with diabetes-related conditions:\n- **Patient ID:** `bfb6537b-535a-4f31-9a56-073220f96a17`, Condition: Prediabetes, Start: 2019-09-11\n- **Patient ID:** `2ffe93...",
+    "query_understanding": "Processed healthcare query: rack patient outcomes for diabetes management",
+    "data": [],
+    "sql_generated": null,
+    "result_count": 1,
+    "metadata": {
+      "agent_type": "react_only",
+      "success_score": 1,
+      "error_score": 0,
+      "response_type": "text_analysis",
+      "processing_time_seconds": 22.047249,
+      "session_id": "react_20250702_230923",
+      "query_number": 2
+    },
+    "timestamp": "2025-07-02T23:11:20.390538",
+    "powered_by": "LangGraph ReAct Agent",
+    "message": "Here is the data related to tracking patient outcomes for diabetes management:\n\n### 1. **Conditions Related to Diabetes**\nPatients diagnosed with diabetes-related conditions:\n- **Patient ID:** `bfb6537b-535a-4f31-9a56-073220f96a17`, Condition: Prediabetes, Start: 2019-09-11\n- **Patient ID:** `2ffe93...",
+    "structured_response": {
+      "success": true,
+      "message": "Here is the data related to tracking patient outcomes for diabetes management:\n\n### 1. **Conditions Related to Diabetes**\nPatients diagnosed with diabetes-related conditions:\n- **Patient ID:** `bfb6537b-535a-4f31-9a56-073220f96a17`, Condition: Prediabetes, Start: 2019-09-11\n- **Patient ID:** `2ffe93...",
+      "query_understanding": "Processed healthcare query: rack patient outcomes for diabetes management",
+      "sql_query": null,
+      "result_count": 1,
+      "results": [],
+      "metadata": {
+        "agent_type": "react_only",
+        "success_score": 1,
+        "error_score": 0,
+        "response_type": "text_analysis",
+        "processing_time_seconds": 22.047249,
+        "session_id": "react_20250702_230923",
+        "query_number": 2
+      },
+      "timestamp": "2025-07-02 23:11:20.390483",
+      "powered_by": "LangGraph ReAct Agent"
+    }
+  }
+}

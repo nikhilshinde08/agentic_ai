@@ -1,0 +1,55 @@
+{
+  "query_metadata": {
+    "original_query": "Get me all the people with influenza",
+    "timestamp": "2025-07-02T23:18:51.873108",
+    "session_id": "react_20250702_230923",
+    "filename": "20250702_231851_Get_me_all_the_people_with_inf.json"
+  },
+  "response": {
+    "success": true,
+    "answer": "No records found for patients with influenza.",
+    "query_understanding": "Retrieve all patients with a condition description containing 'influenza'.",
+    "data": [],
+    "sql_generated": "SELECT \"PATIENT_ID\", \"CONDITION_DESCRIPTION\" FROM \"conditions\" WHERE \"CONDITION_DESCRIPTION\" ILIKE '%influenza%' LIMIT 10;",
+    "result_count": 0,
+    "metadata": {
+      "tables_used": [
+        "conditions"
+      ],
+      "query_type": "SELECT",
+      "reasoning": "Searched for case-insensitive matches of 'influenza' in the 'CONDITION_DESCRIPTION' column.",
+      "agent_type": "react_only",
+      "dialect": "PostgreSQL",
+      "top_k_limit": 10,
+      "processing_time_seconds": 10.988346,
+      "session_id": "react_20250702_230923",
+      "query_number": 7
+    },
+    "timestamp": "2025-07-02T23:18:51.873078",
+    "powered_by": "LangGraph ReAct Agent",
+    "message": "No records found for patients with influenza.",
+    "structured_response": {
+      "success": true,
+      "message": "No records found for patients with influenza.",
+      "query_understanding": "Retrieve all patients with a condition description containing 'influenza'.",
+      "sql_query": "SELECT \"PATIENT_ID\", \"CONDITION_DESCRIPTION\" FROM \"conditions\" WHERE \"CONDITION_DESCRIPTION\" ILIKE '%influenza%' LIMIT 10;",
+      "result_count": 0,
+      "results": [],
+      "metadata": {
+        "tables_used": [
+          "conditions"
+        ],
+        "query_type": "SELECT",
+        "reasoning": "Searched for case-insensitive matches of 'influenza' in the 'CONDITION_DESCRIPTION' column.",
+        "agent_type": "react_only",
+        "dialect": "PostgreSQL",
+        "top_k_limit": 10,
+        "processing_time_seconds": 10.988346,
+        "session_id": "react_20250702_230923",
+        "query_number": 7
+      },
+      "timestamp": "2025-07-02 23:18:51.873032",
+      "powered_by": "LangGraph ReAct Agent"
+    }
+  }
+}

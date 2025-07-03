@@ -1,0 +1,29 @@
+{
+  "query_metadata": {
+    "original_query": "1",
+    "timestamp": "2025-07-01T14:44:35.897271",
+    "session_id": "langgraph_20250701_144423",
+    "filename": "20250701_144435_1.json"
+  },
+  "response": {
+    "success": false,
+    "message": "The input '1' is unclear. Please provide a more specific question or request related to the healthcare database.",
+    "query_understanding": "The input '1' does not provide enough context to determine the user's intent.",
+    "sql_query": null,
+    "result_count": 0,
+    "results": [],
+    "metadata": {
+      "tables_used": [],
+      "query_type": "none",
+      "reasoning": "The input does not specify any action or query to perform on the database.",
+      "agent_type": "langgraph_react",
+      "dialect": "PostgreSQL",
+      "top_k_limit": 10,
+      "processing_time_seconds": 6.513063,
+      "session_id": "langgraph_20250701_144423",
+      "query_number": 1
+    },
+    "timestamp": "2025-07-01 14:44:35.896782",
+    "powered_by": "Azure OpenAI ReAct Agent"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "query_metadata": {
+    "original_query": "can you give me the details about the patient who has diabetes and what medications is he/she is on and names",
+    "timestamp": "2025-07-02T21:11:55.771093",
+    "session_id": "langgraph_20250702_210516",
+    "filename": "20250702_211155_can_you_give_me_the_details_ab.json"
+  },
+  "response": {
+    "success": true,
+    "message": "Successfully retrieved details of patients with diabetes and their medications.",
+    "query_understanding": "Retrieve details of patients diagnosed with diabetes and list the medications they are on.",
+    "sql_query": "SELECT DISTINCT patients.\"PATIENT_ID\", patients.\"FIRST\", patients.\"LAST\", patients.\"GENDER\", patients.\"BIRTHDATE\", patients.\"ADDRESS\", patients.\"CITY\", patients.\"STATE\", patients.\"ZIP\", medications.\"MEDICATION_DESCRIPTION\" \nFROM patients \nINNER JOIN conditions ON patients.\"PATIENT_ID\" = conditions.\"PATIENT_ID\"\nINNER JOIN medications ON patients.\"PATIENT_ID\" = medications.\"PATIENT_ID\"\nWHERE conditions.\"CONDITION_DESCRIPTION\" ILIKE '%diabetes%'\nLIMIT 10;",
+    "result_count": 10,
+    "results": [
+      {
+        "data": {
+          "value": "data={'PATIENT_ID': '0149d553-f571-4e99-867e-fcb9625d07c2', 'FIRST': 'Sophie40', 'LAST': 'Kessler503', 'GENDER': 'F', 'BIRTHDATE': '1979-06-21', 'ADDRESS': '826 Doyle Row Unit 23', 'CITY': 'Northborough', 'STATE': 'Massachusetts', 'ZIP': '01532', 'MEDICATION_DESCRIPTION': 'Amoxicillin 250 MG / Clavulanate 125 MG Oral Tablet'}"
+        }
+      },
+      {
+        "data": {
+          "value": "data={'PATIENT_ID': '0149d553-f571-4e99-867e-fcb9625d07c2', 'FIRST': 'Sophie40', 'LAST': 'Kessler503', 'GENDER': 'F', 'BIRTHDATE': '1979-06-21', 'ADDRESS': '826 Doyle Row Unit 23', 'CITY': 'Northborough', 'STATE': 'Massachusetts', 'ZIP': '01532', 'MEDICATION_DESCRIPTION': 'Errin 28 Day Pack'}"
+        }
+      },
+      {
+        "data": {
+          "value": "data={'PATIENT_ID': '0149d553-f571-4e99-867e-fcb9625d07c2', 'FIRST': 'Sophie40', 'LAST': 'Kessler503', 'GENDER': 'F', 'BIRTHDATE': '1979-06-21', 'ADDRESS': '826 Doyle Row Unit 23', 'CITY': 'Northborough', 'STATE': 'Massachusetts', 'ZIP': '01532', 'MEDICATION_DESCRIPTION': 'Etonogestrel 68 MG Drug Implant'}"
+        }
+      },
+      {
+        "data": {
+          "value": "data={'PATIENT_ID': '0149d553-f571-4e99-867e-fcb9625d07c2', 'FIRST': 'Sophie40', 'LAST': 'Kessler503', 'GENDER': 'F', 'BIRTHDATE': '1979-06-21', 'ADDRESS': '826 Doyle Row Unit 23', 'CITY': 'Northborough', 'STATE': 'Massachusetts', 'ZIP': '01532', 'MEDICATION_DESCRIPTION': 'Jolivette 28 Day Pack'}"
+        }
+      },
+      {
+        "data": {
+          "value": "data={'PATIENT_ID': '0149d553-f571-4e99-867e-fcb9625d07c2', 'FIRST': 'Sophie40', 'LAST': 'Kessler503', 'GENDER': 'F', 'BIRTHDATE': '1979-06-21', 'ADDRESS': '826 Doyle Row Unit 23', 'CITY': 'Northborough', 'STATE': 'Massachusetts', 'ZIP': '01532', 'MEDICATION_DESCRIPTION': 'Mirena 52 MG Intrauterine System'}"
+        }
+      }
+    ],
+    "metadata": {
+      "tables_used": [
+        "patients",
+        "conditions",
+        "medications"
+      ],
+      "query_type": "search",
+      "reasoning": "Joined the patients table with conditions and medications to filter patients diagnosed with diabetes and retrieve their medication details.",
+      "agent_type": "langgraph_react",
+      "dialect": "PostgreSQL",
+      "top_k_limit": 10,
+      "processing_time_seconds": 40.009776,
+      "session_id": "langgraph_20250702_210516",
+      "query_number": 6
+    },
+    "timestamp": "2025-07-02 21:11:55.770900",
+    "powered_by": "Azure OpenAI ReAct Agent"
+  }
+}

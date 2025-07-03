@@ -1,0 +1,32 @@
+{
+  "query_metadata": {
+    "original_query": "give me health conditions for sophie40",
+    "timestamp": "2025-07-02T21:15:47.555181",
+    "session_id": "langgraph_20250702_210516",
+    "filename": "20250702_211547_give_me_health_conditions_for_.json"
+  },
+  "response": {
+    "success": false,
+    "message": "The query failed due to a mismatch in column names or relationships between the 'patients' and 'conditions' tables. The column 'patient_id' in the 'conditions' table might not exist or is incorrectly referenced.",
+    "query_understanding": "Retrieve health conditions for a patient named 'Sophie40'.",
+    "sql_query": "SELECT c.condition_description, c.start, c.stop FROM conditions c INNER JOIN patients p ON c.patient_id = p.patient_id WHERE p.first ILIKE 'sophie40' LIMIT 10;",
+    "result_count": 0,
+    "results": [],
+    "metadata": {
+      "tables_used": [
+        "patients",
+        "conditions"
+      ],
+      "query_type": "search",
+      "reasoning": "Attempted to join 'patients' and 'conditions' tables using 'patient_id' to find conditions for a patient named 'Sophie40'.",
+      "agent_type": "langgraph_react",
+      "dialect": "PostgreSQL",
+      "top_k_limit": 10,
+      "processing_time_seconds": 23.190895,
+      "session_id": "langgraph_20250702_210516",
+      "query_number": 10
+    },
+    "timestamp": "2025-07-02 21:15:47.555078",
+    "powered_by": "Azure OpenAI ReAct Agent"
+  }
+}

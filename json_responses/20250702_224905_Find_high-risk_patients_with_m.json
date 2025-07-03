@@ -1,0 +1,43 @@
+{
+  "query_metadata": {
+    "original_query": "Find high-risk patients with multiple chronic conditions and their total healthcare costs",
+    "timestamp": "2025-07-02T22:49:05.444216",
+    "session_id": "react_20250702_224610",
+    "filename": "20250702_224905_Find_high-risk_patients_with_m.json"
+  },
+  "response": {
+    "success": false,
+    "answer": "I encountered an error while processing your question: Response parsing failed: 'list' object has no attribute 'get'",
+    "query_understanding": "Attempted to process: Find high-risk patients with multiple chronic conditions and their total healthcare costs",
+    "data": [],
+    "sql_generated": null,
+    "result_count": 0,
+    "metadata": {
+      "error_type": "processing_error",
+      "agent_type": "react_only",
+      "processing_time_seconds": 12.833683,
+      "session_id": "react_20250702_224610",
+      "query_number": 3
+    },
+    "timestamp": "2025-07-02T22:49:05.444165",
+    "powered_by": "LangGraph ReAct Agent",
+    "message": "I encountered an error while processing your question: Response parsing failed: 'list' object has no attribute 'get'",
+    "structured_response": {
+      "success": false,
+      "message": "I encountered an error while processing your question: Response parsing failed: 'list' object has no attribute 'get'",
+      "query_understanding": "Attempted to process: Find high-risk patients with multiple chronic conditions and their total healthcare costs",
+      "sql_query": null,
+      "result_count": 0,
+      "results": [],
+      "metadata": {
+        "error_type": "processing_error",
+        "agent_type": "react_only",
+        "processing_time_seconds": 12.833683,
+        "session_id": "react_20250702_224610",
+        "query_number": 3
+      },
+      "timestamp": "2025-07-02 22:49:05.444056",
+      "powered_by": "LangGraph ReAct Agent"
+    }
+  }
+}

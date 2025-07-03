@@ -1,0 +1,25 @@
+{
+  "query_metadata": {
+    "original_query": "show me the patients with heart conditions",
+    "timestamp": "2025-07-01T14:45:57.630954",
+    "session_id": "langgraph_20250701_144423",
+    "filename": "20250701_144557_show_me_the_patients_with_hear.json"
+  },
+  "response": {
+    "success": false,
+    "message": "I encountered an error while processing your question: Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT",
+    "query_understanding": "Attempted to process: show me the patients with heart conditions",
+    "sql_query": null,
+    "result_count": 0,
+    "results": [],
+    "metadata": {
+      "error_type": "GraphRecursionError",
+      "processing_time_seconds": 47.678525,
+      "session_id": "langgraph_20250701_144423",
+      "query_number": 2,
+      "agent_type": "langgraph_react"
+    },
+    "timestamp": "2025-07-01 14:45:57.630828",
+    "powered_by": "Azure OpenAI ReAct Agent"
+  }
+}

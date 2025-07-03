@@ -1,0 +1,25 @@
+{
+  "query_metadata": {
+    "original_query": "give me the medications and health condition of patient sophie40",
+    "timestamp": "2025-07-02T21:14:25.263133",
+    "session_id": "langgraph_20250702_210516",
+    "filename": "20250702_211425_give_me_the_medications_and_he.json"
+  },
+  "response": {
+    "success": false,
+    "message": "I processed your query but encountered an error formatting the response.",
+    "query_understanding": "Attempted to process: give me the medications and health condition of patient sophie40",
+    "sql_query": null,
+    "result_count": 0,
+    "results": [],
+    "metadata": {
+      "parse_error": "1 validation error for DatabaseResponse\nsql_query\n  Input should be a valid string [type=string_type, input_value={'conditions_query': 'SEL...cb9625d07c2\\' LIMIT 10'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type",
+      "processing_time_seconds": 27.540099,
+      "session_id": "langgraph_20250702_210516",
+      "query_number": 8,
+      "agent_type": "langgraph_react"
+    },
+    "timestamp": "2025-07-02 21:14:25.262912",
+    "powered_by": "Azure OpenAI ReAct Agent"
+  }
+}

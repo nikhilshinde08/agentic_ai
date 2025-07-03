@@ -1,0 +1,405 @@
+Database Tables and its schemas.
+
+Table descriptions : Patients ( Table Name )
+This table holds the list of patients’ details with personal information like SSN, ID, name, birthdate etc.
+
+Columns by description
+ID: This column refers to the ID of the patients with the unique value of each record to pull out distinct with similar other tables.
+BIRTHDATE: This column refers to the patient’s birth date.
+DEATHDATE: This column refers to the patient's death date.
+SSN: This column refers to the unique SSN (Social Security Number) of each person.
+DRIVERS: This column refers to the unique number of the driving license details of each person.
+PASSPORT: This column refers to the unique number of the passport number of each person.
+PREFIX: This column refers to pointing out the person with Mr. / Mrs./ Miss.
+FIRST: This column refers to the person’s First name.
+LAST: This column refers to the person's Last Name.
+SUFFIX: This column refers to pointing out the degree or any reputation in their name’s end.
+MAIDEN: This column refers to the maiden name of the person who have the Mrs. column filled in the PREFIX column.
+MARTIAL: This column refers to the marital status of the person with M and S.
+RACE: This column refers to the patient’s identification.
+EITHINICITY: This column refers to the patient’s ethnicity.
+GENDER: This column refers to the patient’s sex with M or F as Male or Female.
+BIRTHPLACE: This column refers to the birthplace of the patient.
+ADDRESS: This column refers to the current address location of the patient.
+CITY: This column refers to the current city of the patient.
+STATE: This column refers to the current state of the patient.
+COUNTY: This column refers to the current county location of the patient.
+ZIP: This column refers to the zip code of the patient residence location.
+LAT: This column refers to the latitude location of the patient location.
+LON: This column refers to the longitude of the patient’s location.
+HEALTHCARE_EXPENSES: This column refers to the total expenses done from the patient for the clinical.
+HEALTHCARE_COVERAGES: This column refers to the total coverages took by the patient from the insurance payer.
+
+Identification fields
+    • ID – Patient’s ID
+    • SSN – Social security number
+    • DRIVERS – Driving License
+    • PASSPORT – Passport number
+Date fields
+    • BIRTHDATE
+    • DEATHDATE
+Relation fields
+    • patients.ID allergies.PATIENT
+    • patients.ID  encounters.PATIENT
+    • patients.ID  devices.PATIENT
+    • patients.ID  conditions.PATIENT
+    • patients.ID  medications.PATIENT
+    • patients.ID  imaging_studies.PATIENT
+    • patients.ID  immunizations.PATIENT
+    • patients.ID  procedures.PATIENT
+    • patients.ID observations. PATIENT
+    • patients.ID  payer_transitions.PATIENT
+    • patients.ID  carplans.PATIENT
+
+Table descriptions : Encounters ( Table Name)
+This table holds the details of the patient’s diagnosis (SNOMED Code) with its description along with the encounter class (admission class) of each patient.
+
+Columns by description
+ID: This column refers to the primary key of this table with each SNOMED code with the patient id created.
+START: This column refers to the start date of the encounter class code.
+STOP: This column refers to the stop date of the encounter class code.
+PATIENT: This column refers to the ID value of the patient’s table each ID.
+ORGANIZATION: This column refers to the patient's linked / admitted / appeared location of the hospital.
+PROVIDER: This column refers to the physician who addressed the patient’s diagnosis at the visit and it is referred to providers table’s master.
+PAYER: This column refers to the patient’s payer details, and it is referred to payers table.
+ENCOUNTERCLASS: This column refers to patient’s admission class like inpatient, outpatient, emergency etc.
+CODE: This code is used to represent a patient encounter where the primary reason for the visit is the presence of a symptom.
+“SNOMED Code - This is a globally recognized clinical terminology used in healthcare to standardize the way patient information is recorded and shared”
+DESCRIPTION: This refers to the detailed explanation of the SNOMED code.
+BASE_ENCOUNTER_COST: This column refers to the base cost amount to pay either from the payer or patient for the entered encounter class.
+TOTAL_CLAIM_COST: This column refers to the total claim cost for the patient’s visit based on the encounter class.
+PAYER_COVERAGE: This column refers to the cost of the amount that the payer can cover from the total amount of claim cost.
+REASONCODE: This column refers to the actual reason encounter found by the provider at the time of visit.
+REASONDESCRIPTION: This column refers to the detailed description of the reason code. Note: This also as a SNMOED code.
+
+Identification fields
+    • ID – Encounter’s ID
+    • PATIENT – Patient ID
+    • CODE – SNMOED code at the visit appearance.
+    • REASONCODE – SNOMED code found by physician on diagnosis.
+Date fields
+    • START
+    • STOP
+Relation fields
+    • encounters.ID  allergies.ENCOUNTER
+    • encounters.ID  conditions.ENCOUNTER
+    • encounters.ID  devices.ENCOUNTER
+    • encounters.ID imaging_studies.ENCOUNTER
+    • encounters.ID immunizations.ENCOUNTER
+    • encounters.ID medications.ENCOUNTER
+    • encounters.ID  careplans.ENCOUNTER
+    • encounters.ID  observations.ENCOUNTER
+    • encounters.ID  procedures.ENCOUNTER
+
+Table descriptions : Allergies ( Table Name )
+This table holds a list of allergies against the patients.
+
+Columns by description
+START: This column refers to the start date of the allergy for patients.
+STOP: This column refers to the stop date of the allergy for patients.
+PATIENT: This column refers to patients table column ID. 
+ENCOUNTER: This column refers to encounters table column ID for each patient specific visit-based allergy.
+CODE: This column refers to a unique code of allergy in standardized number.
+DESCRIPTION: This column refers to detailed description of allergies.
+
+Identification fields
+    • ENCOUNTER – Encounter’s ID
+    • PATIENT – Patient ID
+    • CODE – Allergy code at the visit appearance.
+Date fields
+    • START
+    • STOP
+Relation fields
+    • encounters.ID  allergies.ENCOUNTER
+    • patients.ID allergies.PATIENT
+
+Table descriptions : Careplans ( Table Name )
+This table holds a list of records for patient’s diagnosis handled by nurse.
+
+Columns by description
+ID: This column is a unique key for this table to hold the record for the patient care plan handled by nursing care.
+START: This column refers to the start date of the care plan for patients.
+STOP: This column refers to the stop date of the care plan for patients.
+PATIENT: This column refers to patients table column ID. 
+ENCOUNTER: This column refers to encounters table column ID for each patient.
+CODE: This column refers to the SNMOED code.
+DESCRIPTION: This column refers to detailed description of prior column code.
+REASONCODE: This column refers to SNMOED code and it differs from the CODE column with admission time and diagnosis taken.
+REASONDESCRIPTION: This column refers to detailed descriptions of SNMOED code.
+
+Identification fields
+    • ID – Unique Key of careplans
+    • ENCOUNTER – Encounter’s ID
+    • PATIENT – Patient ID
+    • CODE – SNOMED code at the visit appearance.
+Date fields
+    • START
+    • STOP
+Relation fields
+    • encounters.ID  careplans.ENCOUNTER
+    • patients.ID careplans.PATIENT
+
+Table descriptions : Conditions ( Table Name )
+This table holds a list of records for patient’s condition (Marked with SNOMED CODE) against the patients and encounters table.
+
+Columns by description
+START: This column refers to the start date of patient's health conditions or diagnoses.
+STOP: This column refers to the stop date of patient's health conditions or diagnoses.
+PATIENT: This column refers to patients table column ID. 
+ENCOUNTER: This column refers to encounters table column ID for each patient specific.
+CODE: This column refers to the SNMOED code.
+DESCRIPTION: This column refers to detailed description of prior column code.
+
+Identification fields
+    • ENCOUNTER – Encounter’s ID
+    • PATIENT – Patient ID
+    • CODE – SNOMED code at the visit appearance.
+Date fields
+    • START
+    • STOP
+Relation fields
+    • encounters.ID  conditions.ENCOUNTER
+    • patients.ID conditions.PATIENT
+
+Table descriptions : Devices ( Table Name )
+This table holds the list of patients who undergone any external devices implant to their body with the unique device identification number.
+
+Columns by description
+START: This column refers to the start date of device implant for the patient.
+STOP: This column refers to the stop date of device implant for the patient.
+PATIENT: This column refers to patients table column ID. 
+ENCOUNTER: This column refers to encounters table column ID for each patient specific.
+CODE: This column refers to the SNMOED code.
+DESCRIPTION: This column refers to detailed description of prior column code.
+UDI: This column refers to the unique device identification number which are implanted to patients.
+
+Identification fields
+    • ENCOUNTER – Encounter’s ID
+    • PATIENT – Patient ID
+    • CODE – SNOMED code at the visit appearance.
+Date fields
+    • START
+    • STOP
+Relation fields
+    • encounters.ID  devices.ENCOUNTER
+    • patients.ID  devices.PATIENT
+
+Table descriptions : Imagining_Studies ( Table Name )
+This table holds the list of patients who come across radiology department.
+
+Columns by description
+ID: This column is a unique key for holding the patient’s scanning details.
+DATE: This column refers to the scanned date of the patient in radiology department.
+PATIENT: This column refers to patients table column ID. 
+ENCOUNTER: This column refers to encounters table column ID for each patient specific.
+BODYSITE_CODE: This column refers to the specific section of the body to outperform the scan.
+BODYSITE _DESCRIPTION: This column refers to detailed description of prior column code.
+MODALITY_CODE: This column refers, scan options like Xray, CT, Ultrasound in code form.
+MODALITY_DESCRIPTION: This column shows detailed information of the prior column.
+SOP_CODE: This column refers to SOP Class UID (Service Object Pair Class Unique Identifier) as a unique number that identifies a specific type of DICOM object, such as a CT image or a structured report. It's like a template that defines the structure and rules for a particular type of medical information.
+SOP_DESCRIPTION: This column shows detailed information of the prior column.
+
+Identification fields
+    • ID – Unique Key for imagining_studies
+    • ENCOUNTER – Encounter’s ID
+    • PATIENT – Patient ID
+Date fields
+    • DATE
+Relation fields
+    • encounters.ID  imagining_studies.ENCOUNTER
+    • patients.ID  imagining_studies.PATIENT
+
+Table descriptions : Immunizations ( Table Name )
+This table holds the list of patients who took vaccination based on the EHER control to get prevent from disease.
+
+Columns by description
+DATE: This column refers to date of vaccination taken by the patient.
+PATIENT: This column refers to patients table column ID. 
+ENCOUNTER: This column refers to encounters table column ID for each patient specific.
+CODE: This column refers to the CVX codes of the listed immunization vaccines.
+DESCRIPTION: This column refers to the detailed description of CVX codes.
+BASE_COST: This column refers to base cost charges of the vaccines.
+
+Identification fields
+    • ENCOUNTER – Encounter’s ID
+    • PATIENT – Patient ID
+Date fields
+    • DATE
+Relation fields
+    • encounters.ID  immunizations.ENCOUNTER
+    • patients.ID  immunizations.PATIENT
+
+Table descriptions : Medications ( Table Name )
+This table holds the list of medications taken or prescribed for the patients with the dispensed quantity along with the cost and coverages..
+
+Columns by description
+START: This column refers to the start date of the medication prescribed for the patient.
+STOP: This column refers to the stop date of the medication prescribed for the patient. 
+PATIENT: This column refers to patients table column ID
+PAYER: This column refers to the payers table for the charge related financial sections.
+ENCOUNTER: This column refers to encounters table column ID for each patient specific.
+CODE: This column refers to prescribed medication code defined by national drug code based on package.
+DESCRIPTION: This column refers to the detailed description of the drug prescribed for the patient.
+BASE_COST: This column refers to base cost charges of the medication.
+PAYER_COVERAGE: This column refers to the charges that are covered by the insurance payers.
+DISPENSES: This column refers to the total quantity of medication or drug given for the patient.
+TOTALCOST: This column refers to the total amount charges for the patient against the consumed medication with dispense x base cost.
+REASONCODE: This column refers to the reason or diagnosis occurred for the patient to prescribe the medication by the provider.
+REASONDESCRIPTION: This column refers to the description of diagnosis code.
+
+Identification fields
+    • ENCOUNTER – Encounter’s ID
+    • PATIENT – Patient ID
+Date fields
+    • START
+    • STOP
+Relation fields
+    • encounters.ID  medications.ENCOUNTER
+    • patients.ID  medications.PATIENT
+    • payer_transitions.PAYER  medications.PAYER
+
+Table descriptions : Observations ( Table Name )
+This table holds the patient’s vitals information like temperature, heart rate, height, weight etc.
+
+Columns by description
+DATE: This column refers to date of vitals reading taken for the patient.
+PATIENT: This column refers to patients table column ID. 
+ENCOUNTER: This column refers to encounters table column ID for each patient specific.
+CODE: This column refers to the LONIC code of the vitals.
+DESCRIPTION: This column refers to the detailed description of LONIC code ((Logical Observation Identifiers Names and Codes).
+VALUE: This column refers to the finding entry of patient’s observation like heart rate, temperature, height, weight, smoking status, etc.
+UNITS: This column refers to the unit against the column VALUE.
+TYPE: This column refers to the type of data entered in the VALUE column like text/ numeric.
+
+Identification fields
+    • ENCOUNTER – Encounter’s ID
+    • PATIENT – Patient ID
+Date fields
+    • DATE
+Relation fields
+    • encounters.ID  observations.ENCOUNTER
+    • patients.ID  observations.PATIENT
+
+Table descriptions : Providers ( Table Name )
+This table holds the provider details like name, organization, specialty, address and other details.
+
+Columns by description
+ID: This column refers is a unique key for this table to record the physician details.
+ORAGNIZATION: This column refers to provider linked organization.
+NAME: This column refers to the name of the provider . 
+GENDER: This column refers to the gender detail of the provider.
+SPECIALTY: This column refers to the providers’ specialty department linked.
+ADDRESS: This column refers to the address details of the provider.
+CITY: This column refers to the city residence of the provider.
+STATE: This column refers to the state residence of the provider.
+ZIP: This column refers to the ZIP code of the provider address.
+LAT: This column refers to the latitude location of the provider.
+LON: This column refers to the longitude location of the provider.	
+UTILIZATION:
+
+Identification fields
+    • ID – Unique Key for the Providers
+Relation fields
+    • providers.ORGANIZATION  organizations.ID
+
+Table descriptions : Procedures ( Table Name )
+This table holds the list of procedures code with detail along with the base code and reasons noted against the patient.
+
+Columns by description
+DATE: This column refers to the date of procedures performed for the patient.
+PATIENT: This column refers to patients table column ID. 
+ENCOUNTER: This column refers to encounters table column ID for each patient specific.
+CODE: This column refers to the SNOMED codes of the listed procedures.
+DESCRIPTION: This column refers to the detailed description of SNOMED codes.
+BASE_COST: This column refers to base cost charges of the procedures given to the patient.
+REASONCODE: This column points out the reason for performing the procedure for the patient.
+REASONDESCRIPTION: This column refers to the detailed information or issues that occurred for the patient.	
+
+Identification fields
+    • ENCOUNTER – Encounter’s ID
+    • PATIENT – Patient ID
+Date fields
+    • DATE
+Relation fields
+    • encounters.ID  procedures.ENCOUNTER
+    • patients.ID  procedures.PATIENT
+
+Table descriptions : Payer_transitions ( Table Name )
+This table holds the list of patients with insurance connected for financial related things.
+
+Columns by description
+PATIENT: This column refers to patients table column ID. 
+START_YEAR: This column refers to year start of insurance for the patient.
+END_YEAR: This column refers to year end insurance for the patient.
+PAYER: This column refers to the payers table that holds the insurance details.
+OWNERSHIP: This column refers to self or guardian who takes the ownership of the payments.
+
+Identification fields
+    • PAYER – Payer ID
+    • PATIENT – Patient ID
+Date fields
+    • START_YEAR
+    • END_YEAR
+Relation fields
+    • payers.ID  payer_transitions.PAYER
+    • patients.ID  payer_transitions.PATIENT
+
+Table descriptions : Organizations ( Table Name )
+This table holds the organization’s details like name, address, revenue and other details.
+
+Columns by description
+ID: This column refers is a unique key for this table to record the organization details.
+NAME: This column refers to the name of the organization . 
+ADDRESS: This column refers to the address details of the organization.
+CITY: This column refers to the city location of the organization.
+STATE: This column refers to the state location of the organization.
+ZIP: This column refers to the ZIP code of the organization address.
+LAT: This column refers to the latitude location of the organization.
+LON: This column refers to the longitude location of the organization.	
+PHONE: This column refers to the contact number of the organization.
+REVENUE: This column refers to the total revenue generation of the organization based on the charges filed against the patient. 
+
+Identification fields
+    • ID – Unique Key for the organization
+Relation fields
+    • providers.ORGANIZATION  organizations.ID
+
+Table descriptions : Payers ( Table Name )
+This table holds the Payers (Insurance) details like name, address, revenue and other details.
+
+Columns by description
+ID: This column refers is a unique key for this table to record the Payers detail.
+NAME: This column refers to the name of the Payers. 
+ADDRESS: This column refers to the address details of the Payers.
+CITY: This column refers to the city location of the Payers.
+STATE_HEADQUATERED: This column refers to the state location of the Payers.
+ZIP: This column refers to the ZIP code of the Payers address.
+PHONE: This column refers to the contact number of the Payers.
+AMOUNT_COVERED: This column refers to the total amount that covered by the insurance for the patient on process.
+AMOUNT_UNCOVERED: This column refers to the total amount that UN-covered by the insurance for the patient on process.
+REVENUE: This column refers to the revenue generated by the payers individually over time.
+COVERED_ENCOUNTERS: This column refers to the diagnosis covered for the patient within their derived list.
+UNCOVERED_ENCOUNTERS: This column refers to the diagnosis UN-covered for the patient over their derived list.
+COVERED_MEDICATIONS: This column refers to the total amount of charges that covered for the patient with medications prescribed.
+UNCOVERED_MEDICATIONS: This column refers to the total amount of charges that UN-covered for the patient with medications prescribed.
+COVERED_PROCEDURES: This column refers to the procedures table charges defined for patients based on the encounter which are covered.
+UNCOVERED_PROCEDURES: This column refers to the procedures table charges defined for patients based on the encounter which are NOT covered.
+COVERED_IMMUNIZATIONS: This column refers to the charges that covered for the patient who took vaccine on scheduled/ needed basis with the provider or healthcare defined.
+UNCOVERED_IMMUNIZATIONS: This column refers to the charges that NOT covered for the patient who took vaccine on scheduled/ needed basis with the provider or healthcare defined.
+UNIQUE_CUSTOMERS: This column refers to the payers_transitions table with this payer linked for listed patients. 
+
+Identification fields
+    • ID – Unique Key for the Payers
+Relation fields
+    • payers.ID  payer_transitions.PAYER
+
+
+
+
+
+
+
+
+
+
+

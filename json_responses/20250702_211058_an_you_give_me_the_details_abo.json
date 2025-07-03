@@ -1,0 +1,27 @@
+{
+  "query_metadata": {
+    "original_query": "an you give me the details about the patient who has diabetes and what medications is he/she is using and the name of the patients",
+    "timestamp": "2025-07-02T21:10:58.187977",
+    "session_id": "langgraph_20250702_210516",
+    "filename": "20250702_211058_an_you_give_me_the_details_abo.json"
+  },
+  "response": {
+    "success": false,
+    "message": "I encountered multiple issues while attempting to retrieve the requested data. It seems there are challenges with the database connection or the query execution environment. I will need to investigate further to resolve these issues.\n\nWould you like me to attempt a different approach or refine the q...",
+    "query_understanding": "Processed healthcare query: an you give me the details about the patient who has diabetes and what medications is he/she is using and the name of the patients",
+    "sql_query": null,
+    "result_count": 0,
+    "results": [],
+    "metadata": {
+      "agent_type": "langgraph_react",
+      "success_score": 0,
+      "error_score": 0,
+      "response_type": "text_analysis",
+      "processing_time_seconds": 23.71454,
+      "session_id": "langgraph_20250702_210516",
+      "query_number": 5
+    },
+    "timestamp": "2025-07-02 21:10:58.187803",
+    "powered_by": "Azure OpenAI ReAct Agent"
+  }
+}

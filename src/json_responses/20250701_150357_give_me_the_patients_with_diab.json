@@ -1,0 +1,27 @@
+{
+  "query_metadata": {
+    "original_query": "give me the patients with diabetes",
+    "timestamp": "2025-07-01T15:03:57.574516",
+    "session_id": "langgraph_20250701_150308",
+    "filename": "20250701_150357_give_me_the_patients_with_diab.json"
+  },
+  "response": {
+    "success": false,
+    "message": "I am encountering persistent technical issues while querying the database. It seems there is a mismatch in how the database is being accessed or referenced. I will need to investigate further to resolve this.",
+    "query_understanding": "Processed healthcare query: give me the patients with diabetes",
+    "sql_query": null,
+    "result_count": 0,
+    "results": [],
+    "metadata": {
+      "agent_type": "langgraph_react",
+      "success_score": 0,
+      "error_score": 0,
+      "response_type": "text_analysis",
+      "processing_time_seconds": 31.328685,
+      "session_id": "langgraph_20250701_150308",
+      "query_number": 1
+    },
+    "timestamp": "2025-07-01 15:03:57.573936",
+    "powered_by": "Azure OpenAI ReAct Agent"
+  }
+}

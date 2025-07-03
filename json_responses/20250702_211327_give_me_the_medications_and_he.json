@@ -1,0 +1,25 @@
+{
+  "query_metadata": {
+    "original_query": "give me the medications and health condition of patient sophie40",
+    "timestamp": "2025-07-02T21:13:27.758236",
+    "session_id": "langgraph_20250702_210516",
+    "filename": "20250702_211327_give_me_the_medications_and_he.json"
+  },
+  "response": {
+    "success": false,
+    "message": "I encountered an error while processing your question: Database connection failed: Database connection failed: Task <Task pending name='Task-1' coro=<langgraph_react_cli() running at /home/afour/Desktop/SQL_Agent/generic_sql_agent/src/main.py:171> cb=[_run_until_complete_cb() at /usr/lib/python3.10/asyncio/base_events.py:184]> got Future <Future pending cb=[BaseProtocol._on_waiter_completed()]> attached to a different loop",
+    "query_understanding": "Attempted to process: give me the medications and health condition of patient sophie40",
+    "sql_query": null,
+    "result_count": 0,
+    "results": [],
+    "metadata": {
+      "error_type": "Exception",
+      "processing_time_seconds": 0.001171,
+      "session_id": "langgraph_20250702_210516",
+      "query_number": 7,
+      "agent_type": "langgraph_react"
+    },
+    "timestamp": "2025-07-02 21:13:27.758191",
+    "powered_by": "Azure OpenAI ReAct Agent"
+  }
+}

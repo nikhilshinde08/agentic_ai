@@ -1,0 +1,43 @@
+{
+  "query_metadata": {
+    "original_query": "give me patient health history and allergies history who is aged between 25 to 30 years",
+    "timestamp": "2025-07-02T23:16:39.775179",
+    "session_id": "react_20250702_230923",
+    "filename": "20250702_231639_give_me_patient_health_history.json"
+  },
+  "response": {
+    "success": false,
+    "answer": "I encountered an error while processing your question: Response parsing failed: 1 validation error for DatabaseResponse\nsql_query\n  Input should be a valid string [type=string_type, input_value={'health_history_query': ...0-9252-5b592e3d3184\\')'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type",
+    "query_understanding": "Attempted to process: give me patient health history and allergies history who is aged between 25 to 30 years",
+    "data": [],
+    "sql_generated": null,
+    "result_count": 0,
+    "metadata": {
+      "error_type": "processing_error",
+      "agent_type": "react_only",
+      "processing_time_seconds": 19.033698,
+      "session_id": "react_20250702_230923",
+      "query_number": 6
+    },
+    "timestamp": "2025-07-02T23:16:39.775156",
+    "powered_by": "LangGraph ReAct Agent",
+    "message": "I encountered an error while processing your question: Response parsing failed: 1 validation error for DatabaseResponse\nsql_query\n  Input should be a valid string [type=string_type, input_value={'health_history_query': ...0-9252-5b592e3d3184\\')'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type",
+    "structured_response": {
+      "success": false,
+      "message": "I encountered an error while processing your question: Response parsing failed: 1 validation error for DatabaseResponse\nsql_query\n  Input should be a valid string [type=string_type, input_value={'health_history_query': ...0-9252-5b592e3d3184\\')'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/string_type",
+      "query_understanding": "Attempted to process: give me patient health history and allergies history who is aged between 25 to 30 years",
+      "sql_query": null,
+      "result_count": 0,
+      "results": [],
+      "metadata": {
+        "error_type": "processing_error",
+        "agent_type": "react_only",
+        "processing_time_seconds": 19.033698,
+        "session_id": "react_20250702_230923",
+        "query_number": 6
+      },
+      "timestamp": "2025-07-02 23:16:39.775105",
+      "powered_by": "LangGraph ReAct Agent"
+    }
+  }
+}

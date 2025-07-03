@@ -1,0 +1,47 @@
+{
+  "query_metadata": {
+    "original_query": "What are the most common medical conditions?",
+    "timestamp": "2025-07-02T22:42:18.383789",
+    "session_id": "react_20250702_224138",
+    "filename": "20250702_224218_What_are_the_most_common_medic.json"
+  },
+  "response": {
+    "success": false,
+    "answer": "I am encountering persistent issues with executing the query to retrieve the most common medical conditions. The database connection or query execution environment seems to be experiencing technical difficulties.\n\nI recommend checking the database connection or consulting a database administrator to...",
+    "query_understanding": "Processed healthcare query: What are the most common medical conditions?",
+    "data": [],
+    "sql_generated": null,
+    "result_count": 0,
+    "metadata": {
+      "agent_type": "react_only",
+      "success_score": 0,
+      "error_score": 0,
+      "response_type": "text_analysis",
+      "processing_time_seconds": 21.927748,
+      "session_id": "react_20250702_224138",
+      "query_number": 1
+    },
+    "timestamp": "2025-07-02T22:42:18.383758",
+    "powered_by": "LangGraph ReAct Agent",
+    "message": "I am encountering persistent issues with executing the query to retrieve the most common medical conditions. The database connection or query execution environment seems to be experiencing technical difficulties.\n\nI recommend checking the database connection or consulting a database administrator to...",
+    "structured_response": {
+      "success": false,
+      "message": "I am encountering persistent issues with executing the query to retrieve the most common medical conditions. The database connection or query execution environment seems to be experiencing technical difficulties.\n\nI recommend checking the database connection or consulting a database administrator to...",
+      "query_understanding": "Processed healthcare query: What are the most common medical conditions?",
+      "sql_query": null,
+      "result_count": 0,
+      "results": [],
+      "metadata": {
+        "agent_type": "react_only",
+        "success_score": 0,
+        "error_score": 0,
+        "response_type": "text_analysis",
+        "processing_time_seconds": 21.927748,
+        "session_id": "react_20250702_224138",
+        "query_number": 1
+      },
+      "timestamp": "2025-07-02 22:42:18.383704",
+      "powered_by": "LangGraph ReAct Agent"
+    }
+  }
+}

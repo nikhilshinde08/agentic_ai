@@ -1,0 +1,157 @@
+{
+  "query_metadata": {
+    "original_query": "What are the most common medical conditions?",
+    "timestamp": "2025-07-02T22:46:33.119121",
+    "session_id": "react_20250702_224610",
+    "filename": "20250702_224633_What_are_the_most_common_medic.json"
+  },
+  "response": {
+    "success": true,
+    "answer": "The most common medical conditions have been retrieved successfully.",
+    "query_understanding": "The user wants to know the most frequently occurring medical conditions in the database.",
+    "data": [
+      {
+        "CONDITION_DESCRIPTION": "Viral sinusitis (disorder)",
+        "condition_count": 1248
+      },
+      {
+        "CONDITION_DESCRIPTION": "Acute viral pharyngitis (disorder)",
+        "condition_count": 653
+      },
+      {
+        "CONDITION_DESCRIPTION": "Acute bronchitis (disorder)",
+        "condition_count": 563
+      },
+      {
+        "CONDITION_DESCRIPTION": "Normal pregnancy",
+        "condition_count": 516
+      },
+      {
+        "CONDITION_DESCRIPTION": "Body mass index 30+ - obesity (finding)",
+        "condition_count": 449
+      },
+      {
+        "CONDITION_DESCRIPTION": "Essential hypertension (disorder)",
+        "condition_count": 412
+      },
+      {
+        "CONDITION_DESCRIPTION": "Type 2 diabetes mellitus (disorder)",
+        "condition_count": 389
+      },
+      {
+        "CONDITION_DESCRIPTION": "Hyperlipidemia (disorder)",
+        "condition_count": 376
+      },
+      {
+        "CONDITION_DESCRIPTION": "Asthma (disorder)",
+        "condition_count": 342
+      },
+      {
+        "CONDITION_DESCRIPTION": "Depressive disorder",
+        "condition_count": 328
+      }
+    ],
+    "sql_generated": "SELECT \"CONDITION_DESCRIPTION\", COUNT(*) AS condition_count FROM conditions GROUP BY \"CONDITION_DESCRIPTION\" ORDER BY condition_count DESC LIMIT 10;",
+    "result_count": 10,
+    "metadata": {
+      "tables_used": [
+        "conditions"
+      ],
+      "query_type": "count",
+      "reasoning": "Grouped by condition descriptions and counted occurrences to identify the most common conditions.",
+      "agent_type": "react_only",
+      "dialect": "PostgreSQL",
+      "top_k_limit": 10,
+      "processing_time_seconds": 7.466498,
+      "session_id": "react_20250702_224610",
+      "query_number": 1
+    },
+    "timestamp": "2025-07-02T22:46:33.119092",
+    "powered_by": "LangGraph ReAct Agent",
+    "message": "The most common medical conditions have been retrieved successfully.",
+    "structured_response": {
+      "success": true,
+      "message": "The most common medical conditions have been retrieved successfully.",
+      "query_understanding": "The user wants to know the most frequently occurring medical conditions in the database.",
+      "sql_query": "SELECT \"CONDITION_DESCRIPTION\", COUNT(*) AS condition_count FROM conditions GROUP BY \"CONDITION_DESCRIPTION\" ORDER BY condition_count DESC LIMIT 10;",
+      "result_count": 10,
+      "results": [
+        {
+          "data": {
+            "CONDITION_DESCRIPTION": "Viral sinusitis (disorder)",
+            "condition_count": 1248
+          }
+        },
+        {
+          "data": {
+            "CONDITION_DESCRIPTION": "Acute viral pharyngitis (disorder)",
+            "condition_count": 653
+          }
+        },
+        {
+          "data": {
+            "CONDITION_DESCRIPTION": "Acute bronchitis (disorder)",
+            "condition_count": 563
+          }
+        },
+        {
+          "data": {
+            "CONDITION_DESCRIPTION": "Normal pregnancy",
+            "condition_count": 516
+          }
+        },
+        {
+          "data": {
+            "CONDITION_DESCRIPTION": "Body mass index 30+ - obesity (finding)",
+            "condition_count": 449
+          }
+        },
+        {
+          "data": {
+            "CONDITION_DESCRIPTION": "Essential hypertension (disorder)",
+            "condition_count": 412
+          }
+        },
+        {
+          "data": {
+            "CONDITION_DESCRIPTION": "Type 2 diabetes mellitus (disorder)",
+            "condition_count": 389
+          }
+        },
+        {
+          "data": {
+            "CONDITION_DESCRIPTION": "Hyperlipidemia (disorder)",
+            "condition_count": 376
+          }
+        },
+        {
+          "data": {
+            "CONDITION_DESCRIPTION": "Asthma (disorder)",
+            "condition_count": 342
+          }
+        },
+        {
+          "data": {
+            "CONDITION_DESCRIPTION": "Depressive disorder",
+            "condition_count": 328
+          }
+        }
+      ],
+      "metadata": {
+        "tables_used": [
+          "conditions"
+        ],
+        "query_type": "count",
+        "reasoning": "Grouped by condition descriptions and counted occurrences to identify the most common conditions.",
+        "agent_type": "react_only",
+        "dialect": "PostgreSQL",
+        "top_k_limit": 10,
+        "processing_time_seconds": 7.466498,
+        "session_id": "react_20250702_224610",
+        "query_number": 1
+      },
+      "timestamp": "2025-07-02 22:46:33.119035",
+      "powered_by": "LangGraph ReAct Agent"
+    }
+  }
+}

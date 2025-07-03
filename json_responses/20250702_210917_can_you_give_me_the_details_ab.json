@@ -1,0 +1,58 @@
+{
+  "query_metadata": {
+    "original_query": "can you give me the details about the patient who has diabetes and what medications is he/she is on",
+    "timestamp": "2025-07-02T21:09:17.389584",
+    "session_id": "langgraph_20250702_210516",
+    "filename": "20250702_210917_can_you_give_me_the_details_ab.json"
+  },
+  "response": {
+    "success": true,
+    "message": "Successfully retrieved details of patients with diabetes-related conditions and their medications.",
+    "query_understanding": "Fetch details of patients diagnosed with diabetes (or related conditions) and the medications they are on.",
+    "sql_query": "SELECT conditions.\"PATIENT_ID\", conditions.\"CONDITION_DESCRIPTION\", medications.\"MEDICATION_DESCRIPTION\", medications.\"START\", medications.\"STOP\" FROM conditions INNER JOIN medications ON conditions.\"PATIENT_ID\" = medications.\"PATIENT_ID\" WHERE conditions.\"CONDITION_DESCRIPTION\" ILIKE '%diabetes%' LIMIT 10;",
+    "result_count": 10,
+    "results": [
+      {
+        "data": {
+          "value": "data={'PATIENT_ID': 'bfb6537b-535a-4f31-9a56-073220f96a17', 'CONDITION_DESCRIPTION': 'Prediabetes', 'MEDICATION_DESCRIPTION': 'Seasonique 91 Day Pack', 'START': '2012-05-23', 'STOP': '2013-05-18'}"
+        }
+      },
+      {
+        "data": {
+          "value": "data={'PATIENT_ID': 'bfb6537b-535a-4f31-9a56-073220f96a17', 'CONDITION_DESCRIPTION': 'Prediabetes', 'MEDICATION_DESCRIPTION': 'Seasonique 91 Day Pack', 'START': '2014-05-13', 'STOP': '2015-05-08'}"
+        }
+      },
+      {
+        "data": {
+          "value": "data={'PATIENT_ID': 'bfb6537b-535a-4f31-9a56-073220f96a17', 'CONDITION_DESCRIPTION': 'Prediabetes', 'MEDICATION_DESCRIPTION': 'Penicillin V Potassium 500 MG Oral Tablet', 'START': '2017-07-31', 'STOP': '2017-08-10'}"
+        }
+      },
+      {
+        "data": {
+          "value": "data={'PATIENT_ID': 'bfb6537b-535a-4f31-9a56-073220f96a17', 'CONDITION_DESCRIPTION': 'Prediabetes', 'MEDICATION_DESCRIPTION': 'Levora 0.15/30 28 Day Pack', 'START': '2019-05-25', 'STOP': None}"
+        }
+      },
+      {
+        "data": {
+          "value": "data={'PATIENT_ID': '2ffe9369-24e4-414b-8973-258fad09313a', 'CONDITION_DESCRIPTION': 'Prediabetes', 'MEDICATION_DESCRIPTION': 'Hydrochlorothiazide 25 MG Oral Tablet', 'START': '1976-08-24', 'STOP': '1977-08-30'}"
+        }
+      }
+    ],
+    "metadata": {
+      "tables_used": [
+        "conditions",
+        "medications"
+      ],
+      "query_type": "search",
+      "reasoning": "Joined the conditions and medications tables on patient_id to find patients with diabetes-related conditions and their medications.",
+      "agent_type": "langgraph_react",
+      "dialect": "PostgreSQL",
+      "top_k_limit": 10,
+      "processing_time_seconds": 21.630555,
+      "session_id": "langgraph_20250702_210516",
+      "query_number": 3
+    },
+    "timestamp": "2025-07-02 21:09:17.389492",
+    "powered_by": "Azure OpenAI ReAct Agent"
+  }
+}

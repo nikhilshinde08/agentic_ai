@@ -1,0 +1,167 @@
+{
+  "query_metadata": {
+    "original_query": "give me patient history who is between 15 and 16 years of age",
+    "timestamp": "2025-07-02T23:15:23.629582",
+    "session_id": "react_20250702_230923",
+    "filename": "20250702_231523_give_me_patient_history_who_is.json"
+  },
+  "response": {
+    "success": true,
+    "answer": "Patient history retrieved successfully.",
+    "query_understanding": "Retrieve details of patients aged between 15 and 16 years based on their birthdate.",
+    "data": [
+      {
+        "PATIENT_ID": "e175908a-09db-4730-a311-4e57ba73438b",
+        "FIRST": "Eveline832",
+        "LAST": "Wintheiser220",
+        "BIRTHDATE": "2009-05-07",
+        "ADDRESS": "895 MacGyver Skyway",
+        "CITY": "Chicopee",
+        "STATE": "Massachusetts",
+        "ZIP": "01020"
+      },
+      {
+        "PATIENT_ID": "df91aedf-3e17-44c3-b273-62e35f518475",
+        "FIRST": "Sean831",
+        "LAST": "Casper496",
+        "BIRTHDATE": "2008-10-24",
+        "ADDRESS": "173 Leuschke Club Unit 65",
+        "CITY": "Waltham",
+        "STATE": "Massachusetts",
+        "ZIP": "02453"
+      },
+      {
+        "PATIENT_ID": "4ffa7fe0-5454-480a-b648-ed038052dda1",
+        "FIRST": "Cassaundra447",
+        "LAST": "Kub800",
+        "BIRTHDATE": "2009-10-03",
+        "ADDRESS": "960 Denesik Knoll",
+        "CITY": "Worcester",
+        "STATE": "Massachusetts",
+        "ZIP": "01583"
+      },
+      {
+        "PATIENT_ID": "8d236c5c-485e-4030-b3e8-20e580afbb0a",
+        "FIRST": "Donn979",
+        "LAST": "Casper496",
+        "BIRTHDATE": "2010-03-11",
+        "ADDRESS": "330 Hermiston Trafficway",
+        "CITY": "Westborough",
+        "STATE": "Massachusetts",
+        "ZIP": "None"
+      },
+      {
+        "PATIENT_ID": "4af2e0a8-8c6b-41bc-949f-f4cafa9b2ecb",
+        "FIRST": "Sylvia544",
+        "LAST": "West559",
+        "BIRTHDATE": "2010-02-21",
+        "ADDRESS": "900 Friesen Extension Unit 77",
+        "CITY": "Boston",
+        "STATE": "Massachusetts",
+        "ZIP": "02126"
+      }
+    ],
+    "sql_generated": "SELECT \"PATIENT_ID\", \"FIRST\", \"LAST\", \"BIRTHDATE\", \"ADDRESS\", \"CITY\", \"STATE\", \"ZIP\" FROM \"patients\" WHERE DATE_PART('year', AGE(\"BIRTHDATE\")) BETWEEN 15 AND 16 LIMIT 10;",
+    "result_count": 10,
+    "metadata": {
+      "tables_used": [
+        "patients"
+      ],
+      "query_type": "SELECT",
+      "reasoning": "Used the BIRTHDATE column to calculate age and filter patients between 15 and 16 years old.",
+      "agent_type": "react_only",
+      "dialect": "PostgreSQL",
+      "top_k_limit": 10,
+      "processing_time_seconds": 11.734431,
+      "session_id": "react_20250702_230923",
+      "query_number": 5
+    },
+    "timestamp": "2025-07-02T23:15:23.629533",
+    "powered_by": "LangGraph ReAct Agent",
+    "message": "Patient history retrieved successfully.",
+    "structured_response": {
+      "success": true,
+      "message": "Patient history retrieved successfully.",
+      "query_understanding": "Retrieve details of patients aged between 15 and 16 years based on their birthdate.",
+      "sql_query": "SELECT \"PATIENT_ID\", \"FIRST\", \"LAST\", \"BIRTHDATE\", \"ADDRESS\", \"CITY\", \"STATE\", \"ZIP\" FROM \"patients\" WHERE DATE_PART('year', AGE(\"BIRTHDATE\")) BETWEEN 15 AND 16 LIMIT 10;",
+      "result_count": 10,
+      "results": [
+        {
+          "data": {
+            "PATIENT_ID": "e175908a-09db-4730-a311-4e57ba73438b",
+            "FIRST": "Eveline832",
+            "LAST": "Wintheiser220",
+            "BIRTHDATE": "2009-05-07",
+            "ADDRESS": "895 MacGyver Skyway",
+            "CITY": "Chicopee",
+            "STATE": "Massachusetts",
+            "ZIP": "01020"
+          }
+        },
+        {
+          "data": {
+            "PATIENT_ID": "df91aedf-3e17-44c3-b273-62e35f518475",
+            "FIRST": "Sean831",
+            "LAST": "Casper496",
+            "BIRTHDATE": "2008-10-24",
+            "ADDRESS": "173 Leuschke Club Unit 65",
+            "CITY": "Waltham",
+            "STATE": "Massachusetts",
+            "ZIP": "02453"
+          }
+        },
+        {
+          "data": {
+            "PATIENT_ID": "4ffa7fe0-5454-480a-b648-ed038052dda1",
+            "FIRST": "Cassaundra447",
+            "LAST": "Kub800",
+            "BIRTHDATE": "2009-10-03",
+            "ADDRESS": "960 Denesik Knoll",
+            "CITY": "Worcester",
+            "STATE": "Massachusetts",
+            "ZIP": "01583"
+          }
+        },
+        {
+          "data": {
+            "PATIENT_ID": "8d236c5c-485e-4030-b3e8-20e580afbb0a",
+            "FIRST": "Donn979",
+            "LAST": "Casper496",
+            "BIRTHDATE": "2010-03-11",
+            "ADDRESS": "330 Hermiston Trafficway",
+            "CITY": "Westborough",
+            "STATE": "Massachusetts",
+            "ZIP": "None"
+          }
+        },
+        {
+          "data": {
+            "PATIENT_ID": "4af2e0a8-8c6b-41bc-949f-f4cafa9b2ecb",
+            "FIRST": "Sylvia544",
+            "LAST": "West559",
+            "BIRTHDATE": "2010-02-21",
+            "ADDRESS": "900 Friesen Extension Unit 77",
+            "CITY": "Boston",
+            "STATE": "Massachusetts",
+            "ZIP": "02126"
+          }
+        }
+      ],
+      "metadata": {
+        "tables_used": [
+          "patients"
+        ],
+        "query_type": "SELECT",
+        "reasoning": "Used the BIRTHDATE column to calculate age and filter patients between 15 and 16 years old.",
+        "agent_type": "react_only",
+        "dialect": "PostgreSQL",
+        "top_k_limit": 10,
+        "processing_time_seconds": 11.734431,
+        "session_id": "react_20250702_230923",
+        "query_number": 5
+      },
+      "timestamp": "2025-07-02 23:15:23.629453",
+      "powered_by": "LangGraph ReAct Agent"
+    }
+  }
+}
